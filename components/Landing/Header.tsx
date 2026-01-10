@@ -9,18 +9,19 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes';
 function Header() {
     const { theme, setTheme } = useTheme();
-    console.log('theme:', theme)
   return (
     <div className='z-50 backdrop-blur-sm fixed top-2 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
-        <div className='md:container lg:w-7xl flex items-center justify-between w-full h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r'>
-            <div className='flex items-center justify-center relative -left-16 lg:-left-20'>
-                { theme === 'light' ? <LogoSvgLight/> : <LogoSvgDark/>}
+        <div className='md:container lg:w-7xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
+            <div className='w-[30%] flex justify-start'>
+               <div className='relative right-16 lg:right-20 top-0 '>
+                 { theme === 'light' ? <LogoSvgLight/> : <LogoSvgDark/>}
+               </div>
             </div>
-            <div className='flex gap-4 items-center justify-center'>
+            <div className='w-[70%] flex gap-4 items-center justify-end'>
                 <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
                 <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</h1>
                 <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</h1>
-                <div className='relative left-2'>
+                <div className='flex gap-1'>
                     <ButtonGroup>
                         <Button variant="outline">
                             <FaGithub className='text-2xl'/>
@@ -32,8 +33,8 @@ function Header() {
                         <ThemeToggle />
                         </Button>
                     </ButtonGroup>
-                </div>
                 <button className='border rounded-lg px-[6px] py-[5px] flex lg:hidden justify-center items-center bg-neutral-50 dark:bg-neutral-900'><span className='text-2xl'><CgMenuRight/></span></button>
+                </div>
 
             </div>
         </div>
