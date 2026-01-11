@@ -12,7 +12,10 @@ function Components() {
             Array.from({ length: 6 }).map((_, index) => (
             <div key={index} className='lg:w-full w-full lg:h-[260px] h-[250px] rounded-sm shadow-sm bg-white dark:bg-neutral-950 border flex justify-center items-center'>
                 <div className='w-full h-full flex flex-col justify-between'>
-                    <div></div>
+                    <div className='flex flex-col justify-center items-center h-[220px]'>
+                        <h1 className='text-[16px] font-mono text-neutral-500'>Coming Soon</h1>
+                        <p className='text-xs font-mono text-neutral-600 hover:underline transition duration-300'>Lokalhost.io</p>
+                    </div>
                     <div className='w-full h-[60px] bg-neutral-100 dark:bg-neutral-900 border-t'></div>
                 </div>
             </div>
