@@ -11,9 +11,14 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 import { useTheme } from 'next-themes';
 import { BsDot } from "react-icons/bs";
 import { FiGlobe } from "react-icons/fi";
+import { motion } from 'motion/react';
+import { useMediaQuery } from 'react-responsive'
+
 function Introduce() {
 
   const {theme} = useTheme()
+  const isDesktopOrLaptop = useMediaQuery({ minWidth: 71024 })
+
 
     const techRoles = {
       option: 'Tech Roles',
@@ -139,10 +144,16 @@ function Introduce() {
               <h1 className='font-mono font-mono text-sm text-neutral-700 dark:text-neutral-300'>{ABOUT_MYSELF.heading_1}</h1>
               <p className='font-mono font-normal text-sm text-neutral-700 dark:text-neutral-300'>{ABOUT_MYSELF.heading_2}</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10 pb-10 lg:space-y-10 gap-4 lg:gap-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-2 mt-10 pb-10 gap-8 lg:gap-10'>
               {
                 ABOUT_MYSELF.tech_experties.map((expt, index) => (
-                  <div key={index} className='space-y-2 lg:px-5 md:h-[220px] lg:h-[220px] h-auto px-2 pb-4 pt-4 border hover:bg-neutral-200 hover:dark:bg-neutral-900 transition duration-300'>
+                  <div key={index} className='space-y-2 lg:px-5 md:h-[220px] lg:h-[220px] h-auto px-2 pb-4 pt-4 border border-dashed border-neutral-300 dark:border-neutral-800 hover:bg-neutral-200 hover:dark:bg-neutral-900 transition duration-300 relative'>
+
+                    <motion.span initial={isDesktopOrLaptop ? { x: 10, y: 10, opacity: 0 }: false} style={{ left: 0, top: 0, }} whileInView={{ x: -14 , y: -14, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.98 , ease: 'easeInOut'}} className='absolute bg-neutral-200 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-800 w-[14px] h-[14px]'></motion.span>
+                    <motion.span initial={isDesktopOrLaptop ? {x: 0, y: 0, opacity: 0 }: false} style={{ left: 10, bottom: 4, }} whileInView={{x: -24 , y: 24, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.98 , ease: 'easeInOut'}} className='absolute bg-neutral-200 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-800 w-[14px] h-[14px]'></motion.span>
+                    <motion.span initial={isDesktopOrLaptop ? {x: 10, y: 10, opacity: 0 }: false} style={{ right: 14 , top: 14}} whileInView={{x: 28 , y: -28, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.98 , ease: 'easeInOut'}} className='absolute bg-neutral-200 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-800 w-[14px] h-[14px]'></motion.span>
+                    <motion.span initial={isDesktopOrLaptop ? {x: 10, y: 10, opacity: 0 }: false} style={{ right: 15 , bottom: 6 }} whileInView={{x: 30 , y: 28, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.98 , ease: 'easeInOut'}} className='absolute bg-neutral-200 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-800 w-[14px] h-[14px]'></motion.span>
+
                     <h1 className='font-mono font-bold text-lg text-neutral-700 dark:text-neutral-300'>{expt.tech_name}</h1>
                     <p className='font-mono flex gap-1 text-xs text-neutral-700 dark:text-neutral-300'><span className='text-xl'><BsDot/></span>{expt.about}</p>
 
