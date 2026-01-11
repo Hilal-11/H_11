@@ -13,7 +13,8 @@ function Experience() {
   setOpenIndex(prev => (prev === index ? null : index));
 };
   return (
-    <div className='w-full h-full pt-10'>
+    <div className='w-full h-full pt-5 '>
+      <div className='border-t border-neutral-300 dark:border-neutral-800 px-2 py-1 flex items-start justify-start'><h1 className='font-mono text-3xl font-bold'>Experiance</h1></div>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         {
           EXPERIENCE_LIST.map((experiance , index) => (
@@ -86,3 +87,6 @@ function Experience() {
 }
 
 export default Experience
+
+
+

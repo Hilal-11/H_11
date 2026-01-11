@@ -30,19 +30,8 @@ export const EXPERIENCE_LIST = [
 
   // Styling & UI
   'Tailwind CSS',
-  'CSS Modules',
-  'Design Tokens',
-  'Responsive & Adaptive Design',
 
-  // Performance & UX
- 
-  'Lazy Loading',
-  'Memoization & Render Optimization',
 
-  // Animations & Interaction
-  'Framer Motion',
-  'CSS Animations',
-  'Micro-interactions',
 
 
     ],
@@ -88,13 +77,8 @@ export const EXPERIENCE_LIST = [
           'Browser Extensions',
           'UI/UX Design',
           'UX Writing',
-          'Design System',
-          'Brand Design',
-          'Figma',
-          'Research',
-          'Problem-solving',
-          'Cross-functional collaboration',
-          'Product thinking',
+  
+         
         ],
     },
     {
@@ -144,23 +128,9 @@ export const EXPERIENCE_LIST = [
           'Docker',
           'NGINX',
           'REST API Development',
-          'Authentication & Authorization',
-          'Database Design',
-          'Real-time Systems',
-          'Server-side Rendering',
-          'Responsive Design',
-          'State Management',
-          'API Integration',
-          'Problem-solving',
-          'System Design Thinking',
-          'Debugging & Optimization',
-          'Client Communication',
-          'Requirement Analysis',
-          'UI Performance Optimization',
-          'Docker Containers',
-          'NGINX Configuration',
-          'Linux Server Management',
-          'Deployment & Monitoring',
+   
+    
+        
         ],
 
     },
@@ -190,11 +160,7 @@ export const EXPERIENCE_LIST = [
     'Mobile UI/UX Optimization',
     'State Management',
     'API Integration',
-    'Performance Optimization',
-    'Problem-solving',
-    'Mobile-first thinking',
-    'Code reusability',
-    'Cross-platform architecture',
+  
   ],
 
     },
@@ -224,12 +190,8 @@ export const EXPERIENCE_LIST = [
           'Operating Systems',
           'Computer Networks',
           'Database Management Systems (DBMS)',
-          'Theory of Computation (TOC)',
           'Discrete Mathematics',
-          'Boolean Algebra & Logic Design',
-          'Digital Electronics',
-          'System Design Fundamentals',
-          'Distributed Systems Concepts',
+
         ],
     },
     {
@@ -287,9 +249,39 @@ export const EXPERIENCE_LIST = [
           'C++',
           'Java',
           'Python',
-          'Teamwork',
-          'Presentation',
-          'Analytical Thinking',
+
         ],
     },
 ];
+
+
+export const CERTIFICATIONS = [
+    {
+    certificate_name: "Bachlors of Computer Science",
+    certificate_issuers: "@kashmir university",
+    certicate_date_of_Issue: "2022 - 2025",
+    certicate_link: "",
+    certicate_discription: "Bachlors in CS - deep knowledge of core computer science subjects and computer programming."
+  },
+  {
+    certificate_name: "Frontend Development UI Animation",
+    certificate_issuers: "@animation.dev",
+    certicate_date_of_Issue: "10-05-2024",
+    certicate_link: "",
+    certicate_discription: "Animation on web for react and next.js applications."
+  },
+  {
+    certificate_name: "Frontend Developer @meta",
+    certificate_issuers: "@meta",
+    certicate_date_of_Issue: "05-07-2025",
+    certicate_link: "",
+    certicate_discription: "Animation on web for react and next.js applications."
+  },
+  {
+    certificate_name: "Backend Developer @meta",
+    certificate_issuers: "@meta",
+    certicate_date_of_Issue: "05-07-2025",
+    certicate_link: "",
+    certicate_discription: "Animation on web for react and next.js applications."
+  },
+]
