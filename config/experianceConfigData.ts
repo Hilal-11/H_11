@@ -267,7 +267,7 @@ export const CERTIFICATIONS = [
     certificate_name: "Frontend Development UI Animation",
     certificate_issuers: "@animation.dev",
     certicate_date_of_Issue: "10-05-2024",
-    certicate_link: "",
+    certicate_link: "/Certificate.pdf",
     certicate_discription: "Animation on web for react and next.js applications."
   },
   {
