@@ -11,6 +11,8 @@ import Skills from "@/components/Landing/Skills";
 import Experience from "@/components/Landing/Experience";
 import Footer from "@/components/Landing/Footer";
 import Certificates from "@/components/Landing/Certificates";
+import CTA from "@/components/Landing/CTA";
+import { FAQ } from "@/components/Landing/FAQ";
 export default function Home() {
   return (
     <div>
@@ -68,6 +70,15 @@ export default function Home() {
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
+              </div>
+               <div>
+                <FAQ />
+              </div>
+              <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
+                <StripedPattern/>
+              </div>
+              <div>
+                <CTA /> 
               </div>
             </div>
       </div>
