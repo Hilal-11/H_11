@@ -19,91 +19,92 @@ export const footerConfig: FooterConfigTypes[] = [
         service_title: "Pages",
         services: [
             { service: "Home", navigateTo: "/" },
-            { service: "Docs", navigateTo: "/docs" },
-            { service: "Components", navigateTo: "/about" },
-            { service: "Templates", navigateTo: "/pricing" },
-            { service: "Mobile Apps", navigateTo: "/docs" },
-            { service: "Mobile UI Blocks", navigateTo: "/blog" },
+            { service: "Lokalhost.io", navigateTo: "/" },
+            { service: "Components", navigateTo: "/" },
+            { service: "Templates", navigateTo: "/" },
+            { service: "Designs", navigateTo: "/" },
+            { service: "Authentication kits", navigateTo: "/" },
+            { service: "SASS kits", navigateTo: "/" },
+            { service: "3D designs and patterns", navigateTo: "/" },
+            { service: "Mobile apps", navigateTo: "/" },
+            { service: "React Native/Flutter elements", navigateTo: "/" },
+
         
 
         ] 
     },
 
     {
-        id: "web-components",
-        service_title: "Web Components",
+        id: "services",
+        service_title: "Services",
         services: [
-           { service: "Button", navigateTo: "/components/button" },
-            { service: "Card", navigateTo: "/components/card" },
-            { service: "Modal", navigateTo: "/components/modal" },
-            { service: "Tooltip", navigateTo: "/components/tooltip" },
-            { service: "Avatar", navigateTo: "/components/avatar" },
-            { service: "Input", navigateTo: "/components/input" },
-            { service: "Dropdown", navigateTo: "/components/dropdown" },
-            { service: "Toast", navigateTo: "/components/toast" },
-            { service: "Badge", navigateTo: "/components/badge" },
-    
-
+           { service: "Web components", navigateTo: "/" },
+            { service: "Web templats", navigateTo: "/" },
+            { service: "Authentication kits", navigateTo: "/" },
+            { service: "SASS kits", navigateTo: "/" },
+            { service: "Design kits figma", navigateTo: "/" },
+            { service: "Mobile apps alocks", navigateTo: "/" },
+            { service: "Mobile apps", navigateTo: "/" },
+            { service: "Themes/icons", navigateTo: "/" },
+            { service: "3D animations & patterns", navigateTo: "/" },
+          
         ] 
     },
-
     {
-        id: "web-templates",
-        service_title: "Web Templates",
+        id: "insp",
+        service_title: "Design Inspiration",
         services: [
-           { service: "Landing", navigateTo: "/templates/landing" },
-            { service: "Dashboard", navigateTo: "/templates/dashboard" },
-            { service: "E-commerce", navigateTo: "/templates/ecommerce" },
-            { service: "Blog", navigateTo: "/templates/blog" },
-            { service: "Portfolio", navigateTo: "/templates/portfolio" },
-            { service: "SaaS", navigateTo: "/templates/saas" },
-            { service: "Admin Panel", navigateTo: "/templates/admin" },
-            { service: "Docs Site", navigateTo: "/templates/docs" },
-            { service: "Marketing Site", navigateTo: "/templates/marketing" },
-   
-        ] 
-    },
+           { service: "@shadncUI", navigateTo: "https://ui.shadcn.com/" },
+            { service: "@shadcn stdio", navigateTo: "https://shadcnstudio.com/" },
+            { service: "@aceternity ui", navigateTo: "https://ui.aceternity.com/" },
+            { service: "@ChánhĐại", navigateTo: "https://chanhdai.com/" },
+            { service: "@reactbits", navigateTo: "https://www.reactbits.dev/" },
+            { service: "@magicui", navigateTo: "https://magicui.design/" },
 
-
-    {
-        id: "mobile-apps",
-        service_title: "Mobile Apps",
-        services: [
-           { service: "Business App", navigateTo: "/mobile/business" },
-            { service: "Health & Wellness", navigateTo: "/mobile/health" },
-            { service: "Education / Learning", navigateTo: "/mobile/education" },
-            { service: "E-commerce App", navigateTo: "/mobile/ecommerce" },
-            { service: "Food Delivery", navigateTo: "/mobile/food-delivery" },
-            { service: "Fitness Tracker", navigateTo: "/mobile/fitness" },
-            { service: "Telemedicine", navigateTo: "/mobile/telemedicine" },
-            { service: "Booking & Reservations", navigateTo: "/mobile/booking" },
-            { service: "Social Network", navigateTo: "/mobile/social" },
-      
           
         ] 
     },
 
 
-
-    {
-        id: "mobile-ui-blocks",
-        service_title: "Mobile UI Blocks",
-        services: [
-           { service: "Auth Form", navigateTo: "/blocks/auth-form" },
-            { service: "Profile Card", navigateTo: "/blocks/profile-card" },
-            { service: "Chat UI", navigateTo: "/blocks/chat-ui" },
-            { service: "Feed Item", navigateTo: "/blocks/feed-item" },
-            { service: "Settings List", navigateTo: "/blocks/settings-list" },
-            { service: "Onboarding Steps", navigateTo: "/blocks/onboarding" },
-            { service: "Bottom Sheet", navigateTo: "/blocks/bottom-sheet" },
-            { service: "Floating Action", navigateTo: "/blocks/fab" },
-            { service: "Tab Bar", navigateTo: "/blocks/tab-bar" },
-
-     
-        ] 
-    },
-
 ]
+
+
+    // {
+    //     id: "web-components",
+    //     service_title: "Web Services",
+    //     services: [
+    //        { service: "Button", navigateTo: "/components/button" },
+    //         { service: "Card", navigateTo: "/components/card" },
+    //         { service: "Modal", navigateTo: "/components/modal" },
+    //         { service: "Tooltip", navigateTo: "/components/tooltip" },
+    //         { service: "Avatar", navigateTo: "/components/avatar" },
+    //         { service: "Input", navigateTo: "/components/input" },
+    //         { service: "Dropdown", navigateTo: "/components/dropdown" },
+    //         { service: "Toast", navigateTo: "/components/toast" },
+    //         { service: "Badge", navigateTo: "/components/badge" },
+    
+
+    //     ] 
+    // },
+
+    // {
+    //     id: "web-templates",
+    //     service_title: "Templates",
+    //     services: [
+    //        { service: "Landing", navigateTo: "/templates/landing" },
+    //         { service: "Dashboard", navigateTo: "/templates/dashboard" },
+    //         { service: "E-commerce", navigateTo: "/templates/ecommerce" },
+    //         { service: "Blog", navigateTo: "/templates/blog" },
+    //         { service: "Portfolio", navigateTo: "/templates/portfolio" },
+    //         { service: "SaaS", navigateTo: "/templates/saas" },
+    //         { service: "Admin Panel", navigateTo: "/templates/admin" },
+    //         { service: "Docs Site", navigateTo: "/templates/docs" },
+    //         { service: "Marketing Site", navigateTo: "/templates/marketing" },
+   
+    //     ] 
+    // },
+
+
 
 interface SocialLinks {
     id: number | string,
