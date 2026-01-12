@@ -10,7 +10,7 @@ import { useTheme } from 'next-themes';
 function Footer() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className='relative h-auto w-[100%] bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-400 dark:border-neutral-600 mt-20 mx-auto'>
+    <div className='relative h-auto w-[100%] bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-400 dark:border-neutral-600 mx-auto'>
       <StripedPattern
       direction="right"
       className="absolute inset-0 z-10 mask-l-from-70% mask-l-to-100% mask-r-from-70% mask-r-to-100%"
