@@ -4,18 +4,22 @@ import { MdOutlineTerminal } from "react-icons/md";
 import { motion } from "motion/react"
 import { Globe } from "@/components/ui/globe"
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 function ProductsShowcaseBento() {
   return (
-    <div className='w-full h-full pt-10 lg:pt-20 border relative'>
-      <div className='w-full'>
-        <div className='w-full mx-auto px-5 lg:px-20    '>
-            <h1 className='text-left font-sans font-bold text-2xl lg:text-4xl text-neutral-800 dark:text-neutral-200 pb-3'>Products Build by Hilal</h1>
+    <div className='w-full h-full border relative'>
+      <div className='border w-full py-2 px-5'>
+            <h1 className='text-3xl font-bold font-mono text-left'>Products I build.</h1>
+        </div>
+      <div className='w-full pt-10'>
+        <div className='w-full mx-auto pl-3 lg:pl-12'>
+            <h1 className='text-left font-sans font-bold text-2xl lg:text-4xl text-neutral-800 dark:text-neutral-200 pb-3'>Lokalhost.io</h1>
             <p className='text-left text-sm font-sans font-medium text-neutral-700 dark:text-neutral-300'>Modern and minimalist templates for building your next product. Built with React, NextJS, TailwindCSS, Framer Motion and Typescript.</p>
         </div>
-        <div className="mt-10 relative h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 lg:gap-0  px-px">
+        <div className="mt-10 relative h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 lg:gap-0 px-10">
           
-            <div className="w-full lg:col-span-2 relative overflow-hidden h-auto lg:h-[280px] border-r border-dashed border-t flex justify-start mask-x-from-80% mask-x-to-100%">
-                <div className='pt-7 px-4 lg:pl-14 w-[600px]'>
+            <div className="w-full lg:col-span-2 relative overflow-hidden h-auto lg:h-[280px] border-r border-dashed border-t flex justify-start ">
+                <div className='pt-7 w-[500px]'>
                     <h1 className='text-left text-lg font-sans font-bold text-neutral-800 dark:text-neutral-300'>What Lokalhost.io is?</h1>
                     <p className='text-left pt-1 pl-2 text-xs lg:text-sm lg:pl-2 font-sans font-medium text-neutral-700 dark:text-neutral-400'>A unified ecosystem built for modern product development, covering web and mobile UI, design systems, authentication, motion, and creative assets — all optimized for production use</p>
 
@@ -67,9 +71,9 @@ function ProductsShowcaseBento() {
                   <p className='pt-2 pl-2 text-xs lg:text-sm lg:pl-2 font-sans font-medium text-neutral-700 dark:text-neutral-400'>Professionally designed templates built for real-world products, helping you launch faster with clean layouts, scalable structure, and modern UI patterns.</p>
                 </div>
                 <div className='w-full h-auto pt-4'>
-                  <Reviews />
+                  <TemplatesScrolling />
                 </div>
-                <div className='grid grid-cols-3 relative bottom-6 items-end justify-end'>
+                <div className=' mt-10 grid grid-cols-3 relative bottom-6 items-end justify-end'>
                   <div className='col-span-2'>
                    <AnimatedBeamDemo />
                   </div>
@@ -82,11 +86,11 @@ function ProductsShowcaseBento() {
             </div>
 
             <div className="relative overflow-hidden h-[280px] w-full border-r border-dashed border-t">
-              <div className='flex flex-col w-full h-full overflow-hidden gap-3 mask-x-from-80% mask-x-to-100%'>
-                <div className='px-4 pt-4 z-30 w-full'>
+              <div className='flex flex-col w-full h-full overflow-hidden gap-3'>
+                <div className='z-30 w-full'>
                   <h1 className='text-lg font-sans font-bold text-neutral-800 dark:text-neutral-300'>Components React and Next.Js</h1>
                   <p className='text-xs lg:text-sm lg:pl-2 font-sans font-medium text-neutral-700 dark:text-neutral-400'>Clean and modern UI components for Web applications. Production-ready UI components built for React and Next.js, focused on performance, accessibility, and seamless integration.</p>
-                  <div className='pt-2 w-full flex justify-end gap-2 lg:px-5'>
+                  <div className='pt-4 w-full flex justify-end gap-2 lg:px-5'>
                     <button className='text-xs flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-5 py-1 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Explore components</button>
                     <button className='text-xs flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-5 py-1 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Read Docs</button>
                   </div>
@@ -97,14 +101,14 @@ function ProductsShowcaseBento() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden h-[280px] w-full border-r border-dashed border-t">
+            <div className="pt-5 relative overflow-hidden h-[300px] w-full border-r border-dashed border-t">
             <div className='flex flex-col w-full h-full overflow-hidden gap-3 mask-x-from-80% mask-x-to-100% relative'>
-                <div className='w-full flex justify-center items-center gap-1 px-3 py-3'>
+                <div className='w-full flex justify-center items-center gap-1 px-3 py-2'>
                   <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.98 , ease: 'easeInOut'}} style={{ translateZ: 100 }} className='w-34 h-28 bg-white dark:bg-black border border-dashed rounded-sm shadow-sm'></motion.div>
-                  <div className='w-36 h-34 bg-white dark:bg-black border border-dashed rounded-sm'></div>
+                  <div className='w-36 h-30 bg-white dark:bg-black border border-dashed rounded-sm'></div>
                   <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.98 , ease: 'easeInOut'}} style={{ translateZ: 100 }} className='w-34 h-28 bg-white dark:bg-black border border-dashed rounded-sm shadow-sm'></motion.div>
                 </div>
-                <div className='absolute bottom-0 px-4 pt-4 z-30 w-full'>
+                <div className='absolute bottom-0 px-4 pt-4 z-30 w-full pt-4'>
                   <h1 className='text-lg font-sans font-bold text-neutral-800 dark:text-neutral-300'>Background Patterns Web and Mobile</h1>
                   <p className='text-xs lg:text-sm lg:pl-2 font-sans font-medium text-neutral-700 dark:text-neutral-400'>Carefully designed background patterns that add structure, texture, and visual rhythm to web and mobile layouts while maintaining a clean and modern aesthetic.</p>
                   <div className='pt-2 w-full flex justify-end gap-2 lg:px-5'>
@@ -157,7 +161,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
 import { SiShadcnui } from "react-icons/si";
 import { PiTerminalFill } from "react-icons/pi";
-import { Reviews } from './Reviews';
+
 const Circle = forwardRef<
   HTMLDivElement,
   { className?: string; children?: React.ReactNode }
@@ -269,39 +273,56 @@ export function AnimatedBeamDemo() {
 
 
 
+import { Marquee } from "../ui/marquee"
+import Image from "next/image"
+import { TEMPLATES_LIST_1 , TEMPLATES_LIST_2 } from '../../config/GeneralConfigH_11';
+
+
+const Templates = ({
+  id,
+  template_image,
+  template_url
+}: {
+  id: string
+  template_image: string
+  template_url: string
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full w-36 cursor-pointer overflow-hidden rounded-xl border",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center w-full h-full">
+        <Link href={template_url}>
+        <div className="flex flex-col items-center justify-center">
+          <Image src={template_image} width={160} height={60} alt="err" className="w-full h-[80px] object-cover"/>
+        </div>
+        </Link>
+      </div>
+    </figure>
+  )
+}
 
 function TemplatesScrolling() {
   return (
-    <div className='w-full h-auto mx-auto'>
-      <div className='w-full flex flex-nowrap gap-4 mask-l-from-0% to-20% overflow-x-hidden scrollbar-hide snap-x snap-mandatory scroll-smooth animate-scroll-left py-1'>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-1-min.webp" alt="" /></div>
-
-      </div>
-      <div className='pt-14 py-1 w-full flex flex-nowrap gap-4 mask-r-from-0% to-20% overflow-x-hidden scrollbar-hide snap-x snap-mandatory scroll-smooth relative -top-10 animate-scroll-right'>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-        <div className='snap-center shrink-0 w-[160px] bg-neutral-50 dark:bg-neutral-900 h-[100px] rounded-xl shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'><img className='rounded-sm object-cover' src="https://assets.aceternity.com/templates/schedule-2-min.webp" alt="" /></div>
-      </div>
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {TEMPLATES_LIST_1.map((template) => (
+          <Templates key={template.id} {...template} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {TEMPLATES_LIST_2.map((template) => (
+          <Templates key={template.id} {...template} />
+        ))}
+      </Marquee>
+      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
     </div>
   )
 }
