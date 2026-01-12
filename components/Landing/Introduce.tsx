@@ -19,7 +19,6 @@ function Introduce() {
   const {theme} = useTheme()
   const isDesktopOrLaptop = useMediaQuery({ minWidth: 71024 })
 
-
     const techRoles = {
       option: 'Tech Roles',
       Icon: MdStars,
@@ -128,14 +127,14 @@ function Introduce() {
           }
         </div>
          <div className='absolute bottom-0 z-30 w-full flex justify-center'>
-              <Link href='/docs' className='flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-8 py-2 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Github <span className="text-sm fonr-sans font-medium"><HiOutlineExternalLink/></span></Link>
+              <Link href='http://github.com/hilal-11' className='flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-8 py-2 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Github <span className="text-sm fonr-sans font-medium"><HiOutlineExternalLink/></span></Link>
           </div>
 
       </div>
       <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
         <StripedPattern/>
       </div>
-      <div className='w-full h-auto'>
+      <div className='w-full h-auto' id='about'>
         <div className='border-b px-2 py-1 flex items-start justify-start'><h1 className='font-mono text-3xl font-bold'>About</h1></div>
       </div>
       <div className='w-full h-auto flex flex-col'>
