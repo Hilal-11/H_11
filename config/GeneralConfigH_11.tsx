@@ -72,28 +72,28 @@ export const SOCIAL_LINKS:ISocialLinks[] = [
 
     },
         {
-        id: 1, 
+        id: 2, 
         Icon: FaInstagram,
         social_name: 'Leetcode',
         social_link: 'https://leetcode.com/u/hilal-11/'
     },
     {
-        id: 1, 
+        id: 3, 
         Icon: FaLinkedin,
         social_name: 'Linkedin',
         social_link: 'https://www.linkedin.com/in/hilal-ab5466347/'
     },
     {
-        id: 1, 
+        id: 4, 
         Icon: RiTwitterXLine,
         social_name: 'X',
         social_link: 'https://x.com/Hilal3884871845'
     },
     {
-        id: 1, 
+        id: 5, 
         Icon: FaInstagram,
         social_name: 'Instagram',
-        social_link: 'https://www.instagram.com/'
+        social_link: 'https://www.instagram.com/local_host_404/'
     },
 
 
@@ -259,7 +259,7 @@ export const REVIEWS = [
         img: img1
     },
     {
-        id: 6,
+        id: 2,
         username: "Mir Manan",
         profession: "Product Designer",
         body: "A complete ecosystem for building modern, creative digital products.",
@@ -267,7 +267,7 @@ export const REVIEWS = [
 
     },
     {
-        id: 6,
+        id: 3,
         username: "Mir Manan",
         profession: "Product Designer",
         body: "A complete ecosystem for building modern, creative digital products.",
@@ -275,35 +275,35 @@ export const REVIEWS = [
 
     },
     {
-        id: 2,
+        id: 4,
         username: "Naveed Lone",
         profession: "Software Developer",
         body: "Beautiful templates with thoughtful design and developer-friendly structure.",
         img: img4
     },
     {
-        id: 3,
+        id: 5,
         username: "Asif Khan",
         profession: "Frontend Developer",
         body: "Components feel polished, flexible, and easy to integrate instantly.",
         img: img5
     },
     {
-        id: 4,
+        id: 6,
         username: "Faizan Elahi",
         profession: "Frontend Engineer",
         body: "Lokalhost combines strong design sense with solid engineering practices.",
         img: img6
     },
     {
-        id: 5,
+        id: 7,
         username: "Sahil Saleem",
         profession: "UI Engineer",
         body: "Pixel-perfect designs that scale beautifully across modern applications.",
         img: img7
     },
     {
-        id: 6,
+        id: 8,
         username: "Abass Khan",
         profession: "Product Designer",
         body: "A complete ecosystem for building modern, creative digital products.",
@@ -311,7 +311,7 @@ export const REVIEWS = [
 
     },
         {
-        id: 6,
+        id: 9,
         username: "Parvaz Sheikh",
         profession: "Product Designer",
         body: "A complete ecosystem for building modern, creative digital products.",
