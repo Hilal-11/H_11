@@ -3,7 +3,6 @@ import Introduce from "@/components/Landing/Introduce";
 import { Reviews } from "@/components/Landing/Reviews";
 import { StripedPattern } from "@/components/magicui/striped-pattern";
 import ProductsShowcaseBento from "@/components/Landing/ProductsShowcaseBento";
-import TechRoles from "@/components/Landing/TechRoles";
 import Components from "@/components/Landing/Source/Components";
 import Templates from "@/components/Landing/Source/Templates";
 import Designs from "@/components/Landing/Source/Designs";
