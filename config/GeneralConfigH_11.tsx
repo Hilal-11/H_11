@@ -75,7 +75,7 @@ export const SOCIAL_LINKS:ISocialLinks[] = [
         id: 1, 
         Icon: FaInstagram,
         social_name: 'Leetcode',
-        social_link: 'https://x.com/Hilal3884871845'
+        social_link: 'https://leetcode.com/u/hilal-11/'
     },
     {
         id: 1, 
@@ -87,13 +87,13 @@ export const SOCIAL_LINKS:ISocialLinks[] = [
         id: 1, 
         Icon: RiTwitterXLine,
         social_name: 'X',
-        social_link: 'X.com'
+        social_link: 'https://x.com/Hilal3884871845'
     },
     {
         id: 1, 
         Icon: FaInstagram,
         social_name: 'Instagram',
-        social_link: 'https://x.com/Hilal3884871845'
+        social_link: 'https://www.instagram.com/'
     },
 
 
@@ -200,7 +200,52 @@ export const ABOUT_MYSELF = {
 }
 
 
+export const TEMPLATES_LIST_1 = [
+    {
+
+        id: "jd743wehqr6b3qxpd0gdxhh50x7xpxk2",
+        template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680292/Screenshot_2025-08-14_010122_dqcw04.png",
+        template_url: "https://start-up-seven-iota.vercel.app/",
+        template_name: "Agency Templete PrimeDeck"
+    },
+    {
+        id: "jd7e2jfhf8sz24xfgpech0hzzs7xpbqm",
+        template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680174/Screenshot_2025-08-03_230537_f6popm.png",
+        template_url: "https://portfolio-templete-five.vercel.app/",
+        template_name: "Your Portfolio"
+    },
+    {
+        id: "jd72kqr9k6104ynps1vkfedfxd7xpcgy",
+        template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680072/IMG-20251009-WA0001_idp5je.jpg",
+        template_url: "https://portfolix-two.vercel.app/",
+        template_name: "Minimal Portfolio for everyone"
+    },
+]
+export const TEMPLATES_LIST_2 = [
+      {
+          id: "jd72kqr9k6104ynps1vkfedfxd7xpcgy",
+          template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680072/IMG-20251009-WA0001_idp5je.jpg",
+          template_url: "https://portfolio-pro-seven.vercel.app/",
+          template_name: "Minimal Portfolio for everyone"
+      },
+      {
+          id: "dummy_template_1",
+          template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680291/Screenshot_2025-08-14_010221_gfq5nj.png",
+          template_url: "https://portfolio-pro-seven.vercel.app/",
+          template_name: "Developer Profile"
+      },
+      {
+          id: "dummy_template_2",
+          template_image: "https://res.cloudinary.com/dou5rypdf/image/upload/v1760680065/IMG-20251008-WA0006_qk7ywz.jpg",
+          template_url: "https://portfolio-pro-seven.vercel.app/",
+          template_name: "Agency Templete PrimeDeck"
+      },
+]
+
+
 // Products and projects
+
+
 
 // tech roles
 
@@ -7668,51 +7713,106 @@ export const GITHHUB_REPOSITORIES = [
 export const TECH_STACK = [
     { id: "1", tech_image: "/tech/js.jpeg" , tech_name: "Typescript"},
     { id: "2", tech_image: "/tech/ts.jpeg" , tech_name: "Javascript"},
-    { id: "3", tech_image: "/tech/cpp.jpeg" , tech_name: "C++"},
-    { id: "4", tech_image: "/tech/python.jpeg" , tech_name: "Python"},
+    { id: "3", tech_image: "/tech/cpp.png" , tech_name: "C++"},
+    { id: "4", tech_image: "/tech/py.png" , tech_name: "Python"},
     { id: "5", tech_image: "/tech/node.jpeg" , tech_name: "Node.Js"},
     { id: "6", tech_image: "/tech/react.jpeg" , tech_name: "React.Js"},
     { id: "7", tech_image: "/tech/next.jpeg" , tech_name: "Next.Js"},
-    { id: "8", tech_image: "/tech/tailwind.jpeg" , tech_name: "Tailwind.css"},
+    { id: "8", tech_image: "/tech/tailwind.webp" , tech_name: "Tailwind.css"},
     { id: "9", tech_image: "/tech/motion.jpeg" , tech_name: "Motion"},
     { id: "10", tech_image: "/tech/shad.jpeg", tech_name: "Shadcn-ui"},
-    { id: "11", tech_image: "/tech/redux.jpeg" , tech_name: "Redux toolkit"},
-    { id: "12", tech_image: "/tech/docker.jpeg" , tech_name: "Docker"},
-    { id: "13", tech_image: "/tech/k8s.jpeg" , tech_name: "Kubernets"},
-    { id: "14", tech_image: "/tech/linux.jpeg" , tech_name: "Linux"},
-    { id: "15", tech_image: "/tech/webrtc.jpeg" , tech_name: "WebRTC"},
-    { id: "16", tech_image: "/tech/socketio.jpeg" , tech_name: "Socket.io"},
-    { id: "17", tech_image: "/tech/redis.jpeg" , tech_name: "Radis"},
+    { id: "11", tech_image: "/tech/redux.svg" , tech_name: "Redux toolkit"},
+    { id: "12", tech_image: "/tech/docker.png" , tech_name: "Docker"},
+    { id: "13", tech_image: "/tech/k8s.png" , tech_name: "Kubernets"},
+    { id: "14", tech_image: "/tech/linux.webp" , tech_name: "Linux"},
+    { id: "15", tech_image: "/tech/webrtc.png" , tech_name: "WebRTC"},
+    { id: "16", tech_image: "/tech/socket.png" , tech_name: "Socket.io"},
+    { id: "17", tech_image: "/tech/redis.png" , tech_name: "Radis"},
     { id: "18", tech_image: "/tech/aws.jpeg" , tech_name: "AWS"},
-    { id: "19", tech_image: "/tech/github.jpeg" , tech_name: "Github/Git"},
-    { id: "20", tech_image: "/tech/expressjs.jpeg" , tech_name: "Express.js"},
-    { id: "21", tech_image: "/tech/auth0.jpeg" , tech_name: "Auth0 and Oauth2"},
-    { id: "22", tech_image: "/tech/threejs.jpeg" , tech_name: "Three.js"},
-    { id: "23", tech_image: "/tech/firebase.jpeg" , tech_name: "Firebase"},
-    { id: "24", tech_image: "/tech/reactnative.jpeg" , tech_name: "React Native"},
-    { id: "25", tech_image: "/tech/expo.jpeg" , tech_name: "Expo"},
-    { id: "26", tech_image: "/tech/convexdb.jpeg" , tech_name: "Convex DB"},
-    { id: "27", tech_image: "/tech/postgress.jpeg" , tech_name: "Postgress"},
-    { id: "28", tech_image: "/tech/mongodb.jpeg" , tech_name: "MongoDB"},
-    { id: "29", tech_image: "/tech/kafka.jpeg" , tech_name: "Kafka"},
-    { id: "30", tech_image: "/tech/dsa.jpeg" , tech_name: "Data Structures Algorithms"},
-    { id: "31", tech_image: "/tech/dataanalyst.jpeg" , tech_name: "Data Analyist"},
-    { id: "32", tech_image: "/tech/numpy.jpeg" , tech_name: "Numpy | Pandas | Plotly | Chart.js"},
-    { id: "33", tech_image: "/tech/systemdesign.jpeg" , tech_name: "System Design"},
-    { id: "34", tech_image: "/tech/devops.jpeg" , tech_name: "Devops"},
+    { id: "19", tech_image: "/tech/github.png" , tech_name: "Github/Git"},
+    { id: "20", tech_image: "/tech/express.png" , tech_name: "Express.js"},
+    { id: "21", tech_image: "/tech/auth.jpeg" , tech_name: "Auth0 and Oauth2"},
+    { id: "22", tech_image: "/tech/three.png" , tech_name: "Three.js"},
+    { id: "23", tech_image: "/tech/firebase.jpg" , tech_name: "Firebase"},
+    { id: "24", tech_image: "/tech/react.jpeg" , tech_name: "React Native"},
+    { id: "25", tech_image: "/tech/expo.png" , tech_name: "Expo"},
+    { id: "33", tech_image: "/tech/flutter.jpeg" , tech_name: "Flutter"},
+    { id: "26", tech_image: "/tech/convex.jpeg" , tech_name: "Convex DB"},
+    { id: "27", tech_image: "/tech/postgress.png" , tech_name: "Postgress"},
+    { id: "28", tech_image: "/tech/mongo.png" , tech_name: "MongoDB"},
+    { id: "29", tech_image: "/tech/kafka.png" , tech_name: "Kafka"},
+    { id: "30", tech_image: "/tech/dsa.jpg" , tech_name: "Data Structures Algorithms"},
+    { id: "31", tech_image: "/tech/genai.jpg" , tech_name: "GenAI"},
+    { id: "32", tech_image: "/tech/numpy.png" , tech_name: "Numpy | Pandas | Plotly | Chart.js"},
+    { id: "34", tech_image: "/tech/devops.svg" , tech_name: "Devops"},
     { id: "35", tech_image: "/tech/figma.jpeg" , tech_name: "Figma"}
 ];
 
 // Experiance data config
 
 // Certifications
-
-// components
-
-// templates
-
-// designs
+  //✅ DONE
 
 // FAQ's
+  //✅ DONE
+export const GENERAL_QUESTIONS = [
+  {
+    title: "What do I specialize in?",
+    content:
+      "I specialize in building modern, scalable web and mobile interfaces using React, Next.js, and TypeScript, with a strong focus on performance, accessibility, and clean UI architecture."
+  },
+  {
+    title: "What makes my work different?",
+    content:
+      "I combine strong engineering fundamentals with design thinking, ensuring every product is not only functional but also visually polished, user-friendly, and maintainable."
+  },
+  {
+    title: "Do I work on both frontend and backend?",
+    content:
+      "Yes. While my primary strength is frontend engineering, I also build and integrate robust backend systems, APIs, authentication flows, and real-time features when required."
+  },
+  {
+    title: "How do I approach learning new technologies?",
+    content:
+      "I follow a problem-driven learning approach by studying core concepts, building side projects, and applying best practices to real-world use cases."
+  },
+  {
+    title: "Am I open to remote and international work?",
+    content:
+      "Yes. I work remotely with clients worldwide and adapt easily to different time zones, workflows, and collaboration tools."
+  }
+];
+
+
+export const ABOUT_CLIENT_WORK = [
+  {
+    title: "What type of clients do I usually work with?",
+    content:
+      "I work with startups, product teams, founders, and agencies who value clean code, thoughtful design, and scalable solutions."
+  },
+  {
+    title: "How do I handle project communication?",
+    content:
+      "I maintain clear and consistent communication through regular updates, shared progress, and structured feedback to ensure alignment throughout the project."
+  },
+  {
+    title: "Can I work with existing designs or systems?",
+    content:
+      "Absolutely. I can work with existing design systems, codebases, and workflows, or help improve and refactor them for better performance and scalability."
+  },
+  {
+    title: "How do I ensure code quality and performance?",
+    content:
+      "I follow best practices such as modular architecture, reusable components, performance optimization, and clean, maintainable code standards."
+  },
+  {
+    title: "What can a client expect after project delivery?",
+    content:
+      "Clients receive clean, well-documented code, deployment support if needed, and guidance for future improvements or scaling."
+  }
+];
+
+
 
 // CTA
+  //✅ DONE
