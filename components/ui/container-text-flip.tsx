@@ -32,7 +32,7 @@ export function ContainerTextFlip({
 
   const updateWidthForWord = () => {
     if (textRef.current) {
-      const textWidth = textRef.current.scrollWidth + 30;
+      const textWidth = textRef.current
       setWidth(textWidth);
     }
   };
@@ -58,7 +58,7 @@ export function ContainerTextFlip({
       animate={{ width }}
       transition={{ duration: animationDuration / 2000 }}
       className={cn(
-        "relative inline-block rounded-lg pt-1 pb-1 text-center text-lg font-mono font-bold text-black md:text-2xl dark:text-white",
+        "relative inline-block rounded-lg pt-1 pb-1 text-center text-lg font-mono font-bold text-black md:text-2xl dark:text-white px-6",
         "[background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)]",
         "shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]",
         "dark:[background:linear-gradient(to_bottom,#171717,#0a0a0a)]",
