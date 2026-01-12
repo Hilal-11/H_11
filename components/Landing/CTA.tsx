@@ -5,12 +5,12 @@ import { HiOutlineExternalLink } from 'react-icons/hi'
 function CTA() {
   return (
 <div className='flex justify-center items-center w-full h-auto pt-20 lg:p-16'>
-            <div className='relative w-full grid grid-cols-1 lg:grid-cols-3 border border-dashed h-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]'>
+            <div className='relative w-full grid grid-cols-1 lg:grid-cols-3 border border-dashed h-auto'>
 
-                <span className='w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -left-7.5 -top-7.5 lg:-left-12.5 lg:-top-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
-                <span className='w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -left-7.5 -bottom-7.5 lg:-left-12.5 lg:-bottom-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
-                <span className='w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -right-7.5 -top-7.5 lg:-right-12.5 lg:-top-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
-                <span className='w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -right-7.5 -bottom-7.5 lg:-right-12.5 lg:-bottom-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
+                <span className='hidden lg:block md:block w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -left-7.5 -top-7.5 lg:-left-12.5 lg:-top-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800 '></span>
+                <span className='hidden lg:block md:block w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -left-7.5 -bottom-7.5 lg:-left-12.5 lg:-bottom-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
+                <span className='hidden lg:block md:block w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -right-7.5 -top-7.5 lg:-right-12.5 lg:-top-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
+                <span className='hidden lg:block md:block w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] absolute -right-7.5 -bottom-7.5 lg:-right-12.5 lg:-bottom-12.5 border-1 border-dashed border-neutral-300 dark:border-neutral-800'></span>
 
                 <div className='lg:col-span-2 px-3 lg:px-8 py-5 lg:py-14 '>
                     <div className='absolute inset-0 z-10'>
@@ -36,7 +36,7 @@ function CTA() {
                     <div className="border-t border-dashed border-b py-1 w-30 text-center relative border-neutral-300 dark:border-neutral-700">
                         
                     <span className="h-12 absolute left-4 -top-2.5 border border-dashed border-neutral-300 dark:border-neutral-700"></span>
-                        <p className="text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 underline">@HILAL</p>
+                        <Link href="hilalahmadcodedev123@gmail.com" target='_blank' className="text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 underline">@HILAL</Link>
                         <span className="h-12 absolute right-4 -top-2.5 border border-dashed  border-neutral-300 dark:border-neutral-700"></span>          
                     </div>
                     </div>
