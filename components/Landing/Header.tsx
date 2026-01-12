@@ -7,34 +7,84 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import Image from 'next/image'
 import { useTheme } from 'next-themes';
+import { TooltipProvider,Tooltip , TooltipContent , TooltipTrigger } from '@radix-ui/react-tooltip';
+import { SOCIAL_LINKS } from '@/config/GeneralConfigH_11';
+import Link from 'next/link';
+import { useState } from 'react';
+import { IoMdClose } from "react-icons/io";
+import { useRouter } from 'next/navigation';
 function Header() {
+    const router = useRouter()
     const { theme, setTheme } = useTheme();
+    const [isMobileMenu , setIsMobileMenu] = useState(false)
   return (
-    <div className='z-50 backdrop-blur-sm fixed top-2 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
+    <div className='z-50 backdrop-blur-sm fixed top-1 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
         <div className='md:container lg:w-7xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
             <div className='w-[30%] flex justify-start'>
                <div className='relative right-16 lg:right-20 top-0 '>
                  { theme === 'light' ? <LogoSvgLight/> : <LogoSvgDark/>}
                </div>
             </div>
-            <div className='w-[70%] flex gap-4 items-center justify-end'>
-                <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
-                <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</h1>
-                <h1 className='hidden lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</h1>
+            <div className='w-[70%] flex gap-4 items-center justify-end relative'>
+                <h1 className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
+                <h1 className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</h1>
+                <Link href={'#about'} className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>About</Link>
+                <Link href={'#experiance'} className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Experiance</Link>
+                
                 <div className='flex gap-1'>
                     <ButtonGroup>
-                        <Button variant="outline">
-                            <FaGithub className='text-2xl'/>
-                        </Button>
-                        <Button variant="outline">
-                            <MdOutlineFileDownload className='text-2xl'/>
-                        </Button>
-                        <Button variant="outline">
-                        <ThemeToggle />
-                        </Button>
-                    </ButtonGroup>
-                <button className='border rounded-lg px-[6px] py-[5px] flex lg:hidden justify-center items-center bg-neutral-50 dark:bg-neutral-900'><span className='text-2xl'><CgMenuRight/></span></button>
+                        <TooltipProvider>
+                            <Button variant="outline">
+                                <FaGithub className="text-2xl" />
+                            </Button>
+                            <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Button variant="outline" onClick={() => router.push('/Hilal.pdf')}>
+                                <MdOutlineFileDownload className="text-2xl" />
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent className='text-sm font-sans font-medium bg-neutral-900 dark:bg-neutral-100 rounded-sm flex justify-center items-center text-neutral-200 dark:text-neutral-800 h-[34px] px-4 relative top-1'>Download Resume</TooltipContent>
+                            </Tooltip>
+                            <Button variant="outline">
+                                <ThemeToggle />
+                            </Button>
+                        </TooltipProvider>
+                        </ButtonGroup>
+
+                    <button onClick={() => setIsMobileMenu(!isMobileMenu)} className='border rounded-lg px-[6px] py-[5px] flex md:hidden lg:hidden justify-center items-center bg-neutral-50 dark:bg-neutral-900'>
+                        { isMobileMenu ? <span className='text-xl'><IoMdClose /></span> : <span className='text-xl'><CgMenuRight/></span>}
+                    </button>
+
                 </div>
+                {
+                    isMobileMenu && <div className='md:hidden lg:hidden w-[220px] h-[300px] bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
+                    <div className='w-full h-auto flex flex-col space-y-2 px-2'> 
+                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
+                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>About</h1>
+                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Projects</h1>
+                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Experiance</h1>
+
+                        <div className='w-full h-auto bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm grid grid-cols-2 gap-1 px-1 justify-between'>
+                            <p className='text-sm font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Templates</p>
+                            <p className='text-sm font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Components</p>
+                            <p className='text-sm font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Designs</p>
+                            <p className='text-sm font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Mobile apps</p>
+                        </div>
+
+                        <div className='flex gap-2 w-full'>
+                        {
+                        SOCIAL_LINKS.map(({id , social_link , Icon}) => (
+                            <Link href={social_link}key={id} target='_blank' className="w-full flex items-center justify-betweeen font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
+                            <span className='text-sm bg-white dark:bg-black rounded-sm p-[4px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
+                                <Icon />
+                            </span>
+                            </Link>
+                        ))
+                        }
+                    </div>
+                    </div>
+                </div>
+                }
 
             </div>
         </div>
@@ -44,6 +94,13 @@ function Header() {
 
 export default Header
 
+
+{/* <Tooltip>
+                  <TooltipTrigger><Image className='rounded-full object-cover' src={tech.tech_image} alt={tech.tech_name} width={70} height={70} /></TooltipTrigger>
+                  <TooltipContent>
+                    <p className='font-sans font-xs font-medium'>{tech.tech_name}</p>
+                  </TooltipContent>
+                </Tooltip> */}
 
 
 const LogoSvgLight = () => {
