@@ -12,7 +12,7 @@ function Skills() {
     <div className='w-full h-auto overflow-hidden pt-10 relative'>
         
         <div className='border w-full py-2 px-5'>
-            <h1 className='text-3xl font-bold font-mono text-left'>Tech Stack i'am working on?</h1>
+            <h1 className='text-3xl font-bold font-mono text-left'>Tech Stack i am working on?</h1>
         </div>
         <div className='flex flex-wrap gap-2 md:gap-2 lg:gap-3 p-4 justify-center items-center relative'>
           <DotPattern />
