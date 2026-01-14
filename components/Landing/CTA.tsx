@@ -21,12 +21,12 @@ function CTA() {
                         <p className='px-2 lg:px-6 pt-3 text-[12px] font-mono font-medium text-neutral-600 dark:text-neutral-400 pl-3'>I’m available for client work and can help you customize this template or build something entirely new — from UI and design systems to full-stack applications, backend services, and scalable production solutions.</p>
                     </div>
                     <div className='pt-4 lg:py-20 lg:px-10 flex items-center flex-wrap gap-2'>
-                        <button className='z-30 flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-100 dark:border-neutral-100 relative text-neutral-800 bottom-2 cursor-pointer font-sans font-medium px-6 py-1 rounded-md bg-gradient-to-t from-[#f5f5f5] to-[#d4d4d4] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Ask a Question</button>
+                        <Link href ={'https://www.instagram.com/local_host_404/'} className='z-30 flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-100 dark:border-neutral-100 relative text-neutral-800 bottom-2 cursor-pointer font-sans font-medium px-6 py-1 rounded-md bg-gradient-to-t from-[#f5f5f5] to-[#d4d4d4] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Ask a Question</Link>
 
-                        <Link href='/' className='z-30 flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-6 py-1 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Hire for custom work<span className="text-sm fonr-sans font-medium"><HiOutlineExternalLink/></span></Link>
+                        <Link href='https://www.linkedin.com/in/hilal-ab5466347/' className='z-30 flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 relative bottom-2 cursor-pointer font-sans font-medium px-6 py-1 rounded-md bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Hire for custom work<span className="text-sm fonr-sans font-medium"><HiOutlineExternalLink/></span></Link>
                     </div>
                 </div>
-                <div className='px-2 lg:px-2 lg:py-14'>
+                <div className='px-2 lg:px-2 lg:py-14 z-40'>
                     <h1 className='text-sm text-neutral-600 dark:text-neutral-400 g:text-xl font-bold font-mono'>Hi there, I’m Hilal — welcome to Lokalhost.io.</h1>
                     <p className='lg:pt-6 pt-2 pl-2 text-[12px] font-mono font-medium text-neutral-600 dark:text-neutral-400'>
                         I build clean, scalable, production-ready products — from UI and design systems to web & mobile apps, backend services, and full-stack solutions. If you want this template customized or have an idea to build, let’s talk.
@@ -35,8 +35,8 @@ function CTA() {
                         <span className='font-mono font-medium text-sm'>Know more.</span>
                     <div className="border-t border-dashed border-b py-1 w-30 text-center relative border-neutral-300 dark:border-neutral-700">
                         
-                    <span className="h-12 absolute left-4 -top-2.5 border border-dashed border-neutral-300 dark:border-neutral-700"></span>
-                        <Link href="hilalahmadcodedev123@gmail.com" target='_blank' className="text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 underline">@HILAL</Link>
+                    <span className="h-12 absolute left-4 -top-2.5 border border-dashed border-neutral-300 dark:border-neutral-700 cursor-pointer"></span>
+                        <Link href="https://www.linkedin.com/in/hilal-ab5466347/" target='_blank' className="text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 underline">@HILAL</Link>
                         <span className="h-12 absolute right-4 -top-2.5 border border-dashed  border-neutral-300 dark:border-neutral-700"></span>          
                     </div>
                     </div>
