@@ -10,7 +10,6 @@ import Link from 'next/link'
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { useTheme } from 'next-themes';
 import { BsDot } from "react-icons/bs";
-import { FiGlobe } from "react-icons/fi";
 import { motion } from 'motion/react';
 import { useMediaQuery } from 'react-responsive'
 
@@ -26,8 +25,12 @@ function Introduce() {
     }
   const Hilal = '/hilal.jpg'
   return (
-    <div className='mt-2 relative w-full  border-b border-t border-neutral-300 dark:border-neutral-800'>
+    <div className='relative w-full  border-b border-neutral-300 dark:border-neutral-800'>
       <div className='h-auto'>
+    
+        <Link href='https://www.instagram.com/local_host_404/' target='_blank' className='w-[300px] mx-auto z-30 flex gap-1 items-center justify-center border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-800 cursor-pointer font-sans font-medium px-10 py-px rounded-full bg-gradient-to-t from-[#262626] to-[#525252] text-neutral-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Avalable for client work<span className="text-xs font-sans font-medium"><HiOutlineExternalLink/></span></Link>
+
+
         <div className='w-full h-full grid grid-cols-1 lg:grid-cols-3 justify-between overflow-hidden'>
           <div className='order-2 lg:order-none col-span-2 w-full py-4 lg:px-6 px-3'>
             <div className=''>
