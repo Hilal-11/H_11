@@ -35,7 +35,9 @@ function Header() {
                     <ButtonGroup>
                         <TooltipProvider>
                             <Button variant="outline">
-                                <FaGithub className="text-2xl" />
+                                <Link href={'https://github.com/hilal-11'}>
+                                    <FaGithub className="text-2xl" />
+                                </Link>
                             </Button>
                             <Tooltip>
                             <TooltipTrigger asChild>
