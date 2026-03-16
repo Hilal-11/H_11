@@ -35,24 +35,34 @@ interface IHeader {
 }
 export const HEADER:IHeader[] = [
     {
-        id: 2,
-        navItem: "Lokalhost.io",
-        navLink: "https://localhost.io",
+      id: 1,
+      navItem: "Projects",
+      navLink: "/work",
     },
     {
         id: 3,
         navItem: "Components",
-        navLink: "#components",
+        navLink: "/components",
     },
     {
         id: 4,
         navItem: "Templates",
-        navLink: "#templates",
+        navLink: "/templates",
     },
     {
         id: 5,
         navItem: "Designs",
-        navLink: "#designs",
+        navLink: "/designs",
+    },
+    {
+        id: 8,
+        navItem: "Custom Work",
+        navLink: "/custom-work",
+    },
+    {
+        id: 2,
+        navItem: "Lokallhost.io",
+        navLink: "https://locallhost.io",
     },
 ]
 // social links
