@@ -5,7 +5,6 @@ import { StripedPattern } from "@/components/magicui/striped-pattern";
 import ProductsShowcaseBento from "@/components/Landing/ProductsShowcaseBento";
 import Components from "@/components/Landing/Source/Components";
 import Templates from "@/components/Landing/Source/Templates";
-import Designs from "@/components/Landing/Source/Designs";
 import Skills from "@/components/Landing/Skills";
 import Experience from "@/components/Landing/Experience";
 import Footer from "@/components/Landing/Footer";
@@ -52,20 +51,17 @@ export default function Home() {
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
               </div>
-              <div>
+              <div className="p-2">
                 <Components />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
               </div>
-              <div>
+              <div className="p-2">
                 <Templates />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
-              </div>
-              <div>
-                <Designs />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
