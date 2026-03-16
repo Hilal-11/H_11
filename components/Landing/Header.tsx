@@ -5,7 +5,6 @@ import { ButtonGroup } from '../ui/button-group'
 import { FaGithub } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
-import Image from 'next/image'
 import { useTheme } from 'next-themes';
 import { TooltipProvider,Tooltip , TooltipContent , TooltipTrigger } from '@radix-ui/react-tooltip';
 import { SOCIAL_LINKS } from '@/config/GeneralConfigH_11';
@@ -13,12 +12,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from 'next/navigation';
+import { HEADER } from '@/config/GeneralConfigH_11';
 function Header() {
     const router = useRouter()
     const { theme, setTheme } = useTheme();
     const [isMobileMenu , setIsMobileMenu] = useState(false)
   return (
-    <div className='z-50 backdrop-blur-sm fixed top-1 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
+    <div id="top" className='z-50 backdrop-blur-sm fixed top-1 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
         <div className='md:container lg:w-7xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
             <div className='w-[30%] flex justify-start'>
                <div className='relative right-16 lg:right-20 top-0 '>
@@ -26,11 +26,11 @@ function Header() {
                </div>
             </div>
             <div className='w-[70%] flex gap-4 items-center justify-end relative'>
-                <h1 className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
-                <h1 className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</h1>
-                <Link href={'#about'} className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>About</Link>
-                <Link href={'#experiance'} className='hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Experiance</Link>
-                
+            {
+                HEADER.map((item) => (
+                    <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>{item.navItem}</Link>
+                ))
+            }
                 <div className='flex gap-1'>
                     <ButtonGroup>
                         <TooltipProvider>
@@ -96,13 +96,6 @@ function Header() {
 
 export default Header
 
-
-{/* <Tooltip>
-                  <TooltipTrigger><Image className='rounded-full object-cover' src={tech.tech_image} alt={tech.tech_name} width={70} height={70} /></TooltipTrigger>
-                  <TooltipContent>
-                    <p className='font-sans font-xs font-medium'>{tech.tech_name}</p>
-                  </TooltipContent>
-                </Tooltip> */}
 
 
 const LogoSvgLight = () => {
