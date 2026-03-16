@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import GoToTop from "@/components/MicroComponents/GotoTop";
+import TopLoader from "@/components/MicroComponents/Loading";
+import { FeedbackMobile } from "@/components/MicroComponents/Feedback";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,15 +27,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body 
+        
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          <GoToTop />
+          <FeedbackMobile />
+          <TopLoader />
+          
           {children}
+
+
         </ThemeProvider>
       </body>
     </html>
