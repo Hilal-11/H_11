@@ -14,10 +14,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
   title: "Hilal_11",
-  description: "Software enginner Hilal_11",
+  description: "Software engineer Hilal_11",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -41,8 +45,6 @@ export default function RootLayout({
           <TopLoader />
           
           {children}
-
-
         </ThemeProvider>
       </body>
     </html>

@@ -11,7 +11,7 @@ type TooltipState  = { visible: boolean; x: number; y: number; contribution: Con
 const MONTH_LABELS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 const BLOCK = 13   // px – cell size
 const GAP   = 3    // px – gap between cells
-const GITHUB_URL = 'https://github.com/YOUR_USERNAME' // ← replace with your username
+const GITHUB_URL = 'https://github.com/Hilal-11' // ← replace with your username
 
 // ─── Level → Tailwind colour map (light / dark) ───────────────────────────────
 const LEVEL_COLORS: Record<number, string> = {
