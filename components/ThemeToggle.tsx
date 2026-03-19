@@ -27,7 +27,7 @@ export function ThemeToggle() {
             }}
             
         >
-            <audio ref={audioRef} src={'/sounds/sound_dark_theme.mp3'} preload="auto"  />
+            <audio ref={audioRef} src={'/sounds/audio.mp3'} preload="auto"  />
             {theme === "light" ? (
                 <span onClick={() => audioRef.current?.play()}><Sun className="h-5 w-5 text-black" /></span>
             ) : (
