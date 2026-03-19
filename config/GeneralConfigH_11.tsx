@@ -331,13 +331,13 @@ export const REVIEWS = [
 ]
 
 export const CONTRIBUTIONS_GITHUB = {
-  total: {
+  "total": {
     "2023": 30,
-    "2024": 85,
-    "2025": 2620,
-    "2026": 76
+    "2024": 4692,
+    "2025": 2862,
+    "2026": 534
   },
-  contributions: [
+  "contributions": [
     {
       "date": "2026-01-01",
       "count": 0,
@@ -376,17 +376,17 @@ export const CONTRIBUTIONS_GITHUB = {
     {
       "date": "2026-01-08",
       "count": 24,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-01-09",
       "count": 7,
-      "level": 4
+      "level": 1
     },
     {
       "date": "2026-01-10",
       "count": 8,
-      "level": 4
+      "level": 1
     },
     {
       "date": "2026-01-11",
@@ -395,63 +395,63 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-01-12",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2026-01-13",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2026-01-14",
-      "count": 0,
-      "level": 0
+      "count": 37,
+      "level": 4
     },
     {
       "date": "2026-01-15",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-01-16",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2026-01-17",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2026-01-18",
-      "count": 0,
-      "level": 0
+      "count": 23,
+      "level": 3
     },
     {
       "date": "2026-01-19",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2026-01-20",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 3
     },
     {
       "date": "2026-01-21",
-      "count": 0,
-      "level": 0
+      "count": 22,
+      "level": 3
     },
     {
       "date": "2026-01-22",
-      "count": 0,
-      "level": 0
+      "count": 10,
+      "level": 2
     },
     {
       "date": "2026-01-23",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2026-01-24",
@@ -515,68 +515,68 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-02-05",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2026-02-06",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2026-02-07",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 2
     },
     {
       "date": "2026-02-08",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2026-02-09",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2026-02-10",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2026-02-11",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2026-02-12",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2026-02-13",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 3
     },
     {
       "date": "2026-02-14",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 2
     },
     {
       "date": "2026-02-15",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2026-02-16",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2026-02-17",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 2
     },
     {
       "date": "2026-02-18",
@@ -590,33 +590,33 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-02-20",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 2
     },
     {
       "date": "2026-02-21",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 2
     },
     {
       "date": "2026-02-22",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2026-02-23",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2026-02-24",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 4
     },
     {
       "date": "2026-02-25",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2026-02-26",
@@ -625,18 +625,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-02-27",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2026-02-28",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-03-01",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-03-02",
@@ -645,8 +645,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-03-03",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-03-04",
@@ -660,13 +660,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-03-06",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2026-03-07",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-03-08",
@@ -710,8 +710,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2026-03-16",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2026-03-17",
@@ -2165,18 +2165,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-01",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2025-01-02",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2025-01-03",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2025-01-04",
@@ -2190,28 +2190,28 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-06",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2025-01-07",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 1
     },
     {
       "date": "2025-01-08",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2025-01-09",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 1
     },
     {
       "date": "2025-01-10",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2025-01-11",
@@ -2220,23 +2220,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-12",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 1
     },
     {
       "date": "2025-01-13",
-      "count": 0,
-      "level": 0
+      "count": 10,
+      "level": 1
     },
     {
       "date": "2025-01-14",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2025-01-15",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2025-01-16",
@@ -2245,38 +2245,38 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-17",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2025-01-18",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2025-01-19",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2025-01-20",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 1
     },
     {
       "date": "2025-01-21",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2025-01-22",
-      "count": 1,
+      "count": 12,
       "level": 1
     },
     {
       "date": "2025-01-23",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2025-01-24",
@@ -2290,8 +2290,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-26",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2025-01-27",
@@ -2305,58 +2305,58 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2025-01-29",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 1
     },
     {
       "date": "2025-01-30",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2025-01-31",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2025-02-01",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2025-02-02",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2025-02-03",
-      "count": 1,
+      "count": 5,
       "level": 1
     },
     {
       "date": "2025-02-04",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2025-02-05",
-      "count": 1,
+      "count": 5,
       "level": 1
     },
     {
       "date": "2025-02-06",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2025-02-07",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2025-02-08",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2025-02-09",
@@ -3990,13 +3990,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-01",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-01-02",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-01-03",
@@ -4010,13 +4010,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-05",
-      "count": 1,
-      "level": 1
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-01-06",
-      "count": 0,
-      "level": 0
+      "count": 36,
+      "level": 3
     },
     {
       "date": "2024-01-07",
@@ -4025,23 +4025,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-08",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-01-09",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-01-10",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-01-11",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-01-12",
@@ -4050,13 +4050,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-13",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-01-14",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-01-15",
@@ -4065,13 +4065,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-16",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-01-17",
-      "count": 1,
-      "level": 1
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-01-18",
@@ -4080,8 +4080,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-19",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-01-20",
@@ -4090,8 +4090,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-21",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-01-22",
@@ -4115,48 +4115,48 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-01-26",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-01-27",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-01-28",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-01-29",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-01-30",
-      "count": 0,
-      "level": 0
+      "count": 24,
+      "level": 2
     },
     {
       "date": "2024-01-31",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-02-01",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-02-02",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-02-03",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-02-04",
@@ -4165,7 +4165,7 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-02-05",
-      "count": 2,
+      "count": 17,
       "level": 2
     },
     {
@@ -4175,48 +4175,48 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-02-07",
-      "count": 6,
-      "level": 4
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-02-08",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-02-09",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-02-10",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2024-02-11",
-      "count": 0,
-      "level": 0
+      "count": 32,
+      "level": 3
     },
     {
       "date": "2024-02-12",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-02-13",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-02-14",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-02-15",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-02-16",
@@ -4225,8 +4225,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-02-17",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-02-18",
@@ -4235,33 +4235,33 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-02-19",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-02-20",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-02-21",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2024-02-22",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-02-23",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-02-24",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-02-25",
@@ -4280,58 +4280,58 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-02-28",
-      "count": 0,
-      "level": 0
+      "count": 24,
+      "level": 2
     },
     {
       "date": "2024-02-29",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-03-01",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-03-02",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-03-03",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2024-03-04",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-03-05",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-03-06",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2024-03-07",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-03-08",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-03-09",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-03-10",
@@ -4340,68 +4340,68 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-03-11",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-03-12",
-      "count": 0,
-      "level": 0
+      "count": 24,
+      "level": 2
     },
     {
       "date": "2024-03-13",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-03-14",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-03-15",
-      "count": 0,
-      "level": 0
+      "count": 24,
+      "level": 2
     },
     {
       "date": "2024-03-16",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-03-17",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-03-18",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-03-19",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-03-20",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-03-21",
-      "count": 0,
-      "level": 0
+      "count": 22,
+      "level": 2
     },
     {
       "date": "2024-03-22",
-      "count": 0,
-      "level": 0
+      "count": 22,
+      "level": 2
     },
     {
       "date": "2024-03-23",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-03-24",
@@ -4410,53 +4410,53 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-03-25",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-03-26",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-03-27",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-03-28",
-      "count": 0,
-      "level": 0
+      "count": 35,
+      "level": 3
     },
     {
       "date": "2024-03-29",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-03-30",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-03-31",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-04-01",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-04-02",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-04-03",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-04-04",
@@ -4465,23 +4465,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-05",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-04-06",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-04-07",
-      "count": 0,
-      "level": 0
+      "count": 23,
+      "level": 2
     },
     {
       "date": "2024-04-08",
-      "count": 0,
-      "level": 0
+      "count": 17,
+      "level": 2
     },
     {
       "date": "2024-04-09",
@@ -4490,18 +4490,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-10",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-04-11",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-04-12",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-04-13",
@@ -4510,8 +4510,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-14",
-      "count": 0,
-      "level": 0
+      "count": 23,
+      "level": 2
     },
     {
       "date": "2024-04-15",
@@ -4520,18 +4520,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-16",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-04-17",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-04-18",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-04-19",
@@ -4540,33 +4540,33 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-20",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-04-21",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2024-04-22",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-04-23",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-04-24",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-04-25",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-04-26",
@@ -4575,53 +4575,53 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-04-27",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-04-28",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-04-29",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-04-30",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-05-01",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-05-02",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-05-03",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-05-04",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-05-05",
-      "count": 0,
-      "level": 0
+      "count": 32,
+      "level": 3
     },
     {
       "date": "2024-05-06",
-      "count": 0,
-      "level": 0
+      "count": 10,
+      "level": 1
     },
     {
       "date": "2024-05-07",
@@ -4645,93 +4645,93 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-05-11",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2024-05-12",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-05-13",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-05-14",
-      "count": 0,
-      "level": 0
+      "count": 10,
+      "level": 1
     },
     {
       "date": "2024-05-15",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2024-05-16",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-05-17",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-05-18",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-05-19",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-05-20",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-05-21",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-05-22",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-05-23",
       "count": 2,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2024-05-24",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2024-05-25",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-05-26",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-05-27",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-05-28",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-05-29",
@@ -4740,63 +4740,63 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-05-30",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-05-31",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-06-01",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-06-02",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-06-03",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-06-04",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2024-06-05",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-06-06",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-06-07",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-06-08",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-06-09",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-06-10",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-06-11",
@@ -4815,28 +4815,28 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-06-14",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-06-15",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-06-16",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-06-17",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-06-18",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2024-06-19",
@@ -4850,23 +4850,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-06-21",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-06-22",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-06-23",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-06-24",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-06-25",
@@ -4875,58 +4875,58 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-06-26",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-06-27",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-06-28",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-06-29",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-06-30",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-07-01",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-07-02",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2024-07-03",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-07-04",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-07-05",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-07-06",
-      "count": 0,
-      "level": 0
+      "count": 35,
+      "level": 3
     },
     {
       "date": "2024-07-07",
@@ -4935,13 +4935,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-07-08",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-07-09",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-07-10",
@@ -4950,23 +4950,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-07-11",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-07-12",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-07-13",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-07-14",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-07-15",
@@ -4975,33 +4975,33 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-07-16",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-07-17",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-07-18",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-07-19",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-07-20",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-07-21",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-07-22",
@@ -5010,23 +5010,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-07-23",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2024-07-24",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-07-25",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-07-26",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-07-27",
@@ -5045,8 +5045,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-07-30",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-07-31",
@@ -5055,53 +5055,53 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-08-01",
-      "count": 0,
-      "level": 0
+      "count": 17,
+      "level": 2
     },
     {
       "date": "2024-08-02",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-08-03",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-08-04",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-08-05",
-      "count": 0,
-      "level": 0
+      "count": 17,
+      "level": 2
     },
     {
       "date": "2024-08-06",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-08-07",
-      "count": 0,
-      "level": 0
+      "count": 7,
+      "level": 1
     },
     {
       "date": "2024-08-08",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 2
     },
     {
       "date": "2024-08-09",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 1
     },
     {
       "date": "2024-08-10",
-      "count": 0,
-      "level": 0
+      "count": 17,
+      "level": 2
     },
     {
       "date": "2024-08-11",
@@ -5115,38 +5115,38 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-08-13",
-      "count": 0,
-      "level": 0
+      "count": 35,
+      "level": 3
     },
     {
       "date": "2024-08-14",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-08-15",
-      "count": 0,
-      "level": 0
+      "count": 32,
+      "level": 3
     },
     {
       "date": "2024-08-16",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-08-17",
-      "count": 0,
-      "level": 0
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-08-18",
-      "count": 0,
-      "level": 0
+      "count": 34,
+      "level": 3
     },
     {
       "date": "2024-08-19",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-08-20",
@@ -5160,13 +5160,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-08-22",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-08-23",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-08-24",
@@ -5175,18 +5175,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-08-25",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-08-26",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-08-27",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-08-28",
@@ -5195,43 +5195,43 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-08-29",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-08-30",
-      "count": 0,
-      "level": 0
+      "count": 36,
+      "level": 3
     },
     {
       "date": "2024-08-31",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2024-09-01",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2024-09-02",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2024-09-03",
-      "count": 1,
+      "count": 4,
       "level": 1
     },
     {
+      "date": "2024-09-01",
+      "count": 10,
+      "level": 1
+    },
+    {
+      "date": "2024-09-02",
+      "count": 6,
+      "level": 1
+    },
+    {
+      "date": "2024-09-03",
+      "count": 35,
+      "level": 3
+    },
+    {
       "date": "2024-09-04",
-      "count": 2,
+      "count": 16,
       "level": 2
     },
     {
       "date": "2024-09-05",
-      "count": 4,
-      "level": 3
+      "count": 8,
+      "level": 1
     },
     {
       "date": "2024-09-06",
@@ -5240,8 +5240,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-09-07",
-      "count": 0,
-      "level": 0
+      "count": 22,
+      "level": 2
     },
     {
       "date": "2024-09-08",
@@ -5250,28 +5250,28 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-09-09",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-09-10",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-09-11",
-      "count": 0,
-      "level": 0
+      "count": 36,
+      "level": 3
     },
     {
       "date": "2024-09-12",
-      "count": 1,
+      "count": 9,
       "level": 1
     },
     {
       "date": "2024-09-13",
-      "count": 0,
-      "level": 0
+      "count": 32,
+      "level": 3
     },
     {
       "date": "2024-09-14",
@@ -5285,63 +5285,63 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-09-16",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-09-17",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-09-18",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-09-19",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-09-20",
-      "count": 0,
-      "level": 0
+      "count": 13,
+      "level": 2
     },
     {
       "date": "2024-09-21",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 2
     },
     {
       "date": "2024-09-22",
-      "count": 0,
-      "level": 0
+      "count": 36,
+      "level": 3
     },
     {
       "date": "2024-09-23",
-      "count": 1,
+      "count": 11,
       "level": 1
     },
     {
       "date": "2024-09-24",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-09-25",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-09-26",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-09-27",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-09-28",
@@ -5350,18 +5350,18 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-09-29",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-09-30",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-10-01",
-      "count": 0,
-      "level": 0
+      "count": 33,
+      "level": 3
     },
     {
       "date": "2024-10-02",
@@ -5370,8 +5370,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-10-03",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-10-04",
@@ -5385,53 +5385,53 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-10-06",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-10-07",
-      "count": 0,
-      "level": 0
+      "count": 30,
+      "level": 3
     },
     {
       "date": "2024-10-08",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-10-09",
       "count": 3,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2024-10-10",
-      "count": 0,
-      "level": 0
+      "count": 35,
+      "level": 3
     },
     {
       "date": "2024-10-11",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-10-12",
-      "count": 0,
-      "level": 0
+      "count": 17,
+      "level": 2
     },
     {
       "date": "2024-10-13",
-      "count": 0,
-      "level": 0
+      "count": 30,
+      "level": 3
     },
     {
       "date": "2024-10-14",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 1
     },
     {
       "date": "2024-10-15",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-10-16",
@@ -5445,73 +5445,73 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-10-18",
-      "count": 0,
-      "level": 0
+      "count": 20,
+      "level": 2
     },
     {
       "date": "2024-10-19",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-10-20",
-      "count": 0,
-      "level": 0
+      "count": 27,
+      "level": 3
     },
     {
       "date": "2024-10-21",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-10-22",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2024-10-23",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-10-24",
-      "count": 0,
-      "level": 0
+      "count": 21,
+      "level": 2
     },
     {
       "date": "2024-10-25",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 1
     },
     {
       "date": "2024-10-26",
-      "count": 0,
-      "level": 0
+      "count": 23,
+      "level": 2
     },
     {
       "date": "2024-10-27",
-      "count": 0,
-      "level": 0
+      "count": 10,
+      "level": 1
     },
     {
       "date": "2024-10-28",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-10-29",
-      "count": 0,
-      "level": 0
+      "count": 19,
+      "level": 2
     },
     {
       "date": "2024-10-30",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-10-31",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2024-11-01",
@@ -5520,8 +5520,8 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-11-02",
-      "count": 0,
-      "level": 0
+      "count": 26,
+      "level": 3
     },
     {
       "date": "2024-11-03",
@@ -5535,23 +5535,23 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-11-05",
-      "count": 0,
-      "level": 0
+      "count": 16,
+      "level": 2
     },
     {
       "date": "2024-11-06",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-11-07",
-      "count": 0,
-      "level": 0
+      "count": 30,
+      "level": 3
     },
     {
       "date": "2024-11-08",
-      "count": 0,
-      "level": 0
+      "count": 6,
+      "level": 1
     },
     {
       "date": "2024-11-09",
@@ -5560,38 +5560,38 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-11-10",
-      "count": 0,
-      "level": 0
+      "count": 31,
+      "level": 3
     },
     {
       "date": "2024-11-11",
-      "count": 0,
-      "level": 0
+      "count": 28,
+      "level": 3
     },
     {
       "date": "2024-11-12",
-      "count": 0,
-      "level": 0
+      "count": 11,
+      "level": 1
     },
     {
       "date": "2024-11-13",
-      "count": 0,
-      "level": 0
+      "count": 22,
+      "level": 2
     },
     {
       "date": "2024-11-14",
-      "count": 0,
-      "level": 0
+      "count": 9,
+      "level": 1
     },
     {
       "date": "2024-11-15",
-      "count": 0,
-      "level": 0
+      "count": 25,
+      "level": 3
     },
     {
       "date": "2024-11-16",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2024-11-17",
@@ -5600,13 +5600,13 @@ export const CONTRIBUTIONS_GITHUB = {
     },
     {
       "date": "2024-11-18",
-      "count": 0,
-      "level": 0
+      "count": 18,
+      "level": 2
     },
     {
       "date": "2024-11-19",
-      "count": 0,
-      "level": 0
+      "count": 29,
+      "level": 3
     },
     {
       "date": "2024-11-20",
@@ -5636,7 +5636,7 @@ export const CONTRIBUTIONS_GITHUB = {
     {
       "date": "2024-11-25",
       "count": 7,
-      "level": 4
+      "level": 1
     },
     {
       "date": "2024-11-26",
@@ -5646,7 +5646,7 @@ export const CONTRIBUTIONS_GITHUB = {
     {
       "date": "2024-11-27",
       "count": 2,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2024-11-28",
@@ -7644,6 +7644,7 @@ export const CONTRIBUTIONS_GITHUB = {
       "level": 0
     }
   ]
+
 }
 
 export const GITHHUB_REPOSITORIES = [
@@ -7717,6 +7718,8 @@ export const GITHHUB_REPOSITORIES = [
         "pushed_at": "2025-09-21T21:16:02Z",
     }
 ]
+
+
 
 // tech stack
 
