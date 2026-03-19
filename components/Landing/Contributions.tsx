@@ -1,5 +1,5 @@
 "use client"
-import { useState, useMemo, useRef, useCallback } from 'react'
+import { useState, useMemo, useRef, useCallback, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import { CONTRIBUTIONS_GITHUB } from '../../config/GeneralConfigH_11'
 
@@ -9,9 +9,10 @@ type TooltipState  = { visible: boolean; x: number; y: number; contribution: Con
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const MONTH_LABELS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-const BLOCK = 13   // px – cell size
+const BLOCK = 12   // px – cell size
 const GAP   = 3    // px – gap between cells
 const GITHUB_URL = 'https://github.com/Hilal-11' // ← replace with your username
+const GITHUB_USERNAME = 'Hilal-11'
 
 // ─── Level → Tailwind colour map (light / dark) ───────────────────────────────
 const LEVEL_COLORS: Record<number, string> = {
@@ -81,12 +82,12 @@ function StatCard({ label, value, accent = false }: { label: string; value: stri
       'border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900/50',
     )}>
       <span className={cn(
-        'font-mono text-xl font-bold leading-none tracking-tight',
-        accent ? 'text-emerald-600 dark:text-emerald-400' : 'text-neutral-900 dark:text-neutral-100',
+        'font-sans text-xl font-bold leading-none tracking-tight',
+        accent ? 'text-neutral-600 dark:text-neutral-400' : 'text-neutral-900 dark:text-neutral-100',
       )}>
         {value}
       </span>
-      <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
+      <span className="font-sans text-[11px] font-medium tracking-widest text-neutral-400 dark:text-neutral-500">
         {label}
       </span>
     </div>
@@ -104,18 +105,58 @@ function GitHubIcon({ className }: { className?: string }) {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export function GithubContributions() {
-  const all = CONTRIBUTIONS_GITHUB.contributions as Contribution[]
+  const [allContributions, setAllContributions] = useState<Contribution[]>(
+    CONTRIBUTIONS_GITHUB.contributions as Contribution[]
+  )
+  const [loading, setLoading] = useState(false)
+  const [usingFallback, setUsingFallback] = useState(false)
 
   const years = useMemo(
-    () => [...new Set(all.map(c => c.date.slice(0, 4)))].sort((a, b) => b.localeCompare(a)),
-    [all],
+    () => [...new Set(allContributions.map(c => c.date.slice(0, 4)))].sort((a, b) => b.localeCompare(a)),
+    [allContributions],
   )
 
   const [year, setYear] = useState<string>(years[0] ?? String(new Date().getFullYear()))
   const [tooltip, setTooltip] = useState<TooltipState>({ visible: false, x: 0, y: 0, contribution: null })
   const wrapRef = useRef<HTMLDivElement>(null)
+  const username = 'Hilal-11'
 
-  const filtered = useMemo(() => all.filter(c => c.date.startsWith(year)), [all, year])
+  // ✅ Fetch data from API on mount and year change
+  useEffect(() => {
+    async function fetchContributions() {
+      setLoading(true)
+      setUsingFallback(false)
+
+      try {
+        const response = await fetch(
+          `https://github-contributions-api.jogruber.de/v4/${username}`
+        )
+
+        if (!response.ok) throw new Error('API failed')
+
+        const data = await response.json()
+
+        // Check if we got valid data
+        if (data.contributions && Array.isArray(data.contributions) && data.contributions.length > 0) {
+          setAllContributions(data.contributions)
+        } else {
+          throw new Error('No contributions data')
+        }
+
+      } catch (error) {
+        console.error('Failed to fetch GitHub contributions:', error)
+        // Use fallback data from config
+        setAllContributions(CONTRIBUTIONS_GITHUB.contributions as Contribution[])
+        setUsingFallback(true)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchContributions()
+  }, [year])
+
+  const filtered = useMemo(() => allContributions.filter(c => c.date.startsWith(year)), [allContributions, year])
   const weeks    = useMemo(() => buildWeeks(filtered), [filtered])
   const stats    = useMemo(() => calcStats(filtered), [filtered])
 
@@ -153,6 +194,9 @@ export function GithubContributions() {
           </h2>
           <p className="mt-0.5 text-xs text-neutral-400 dark:text-neutral-500">
             {stats.total.toLocaleString()} contributions · {year}
+            {usingFallback && (
+              <span className="ml-2 text-orange-500 dark:text-orange-400">(cached)</span>
+            )}
           </p>
         </div>
 
@@ -160,8 +204,8 @@ export function GithubContributions() {
         <div className="flex items-center gap-2">
 
           {/* GitHub link */}
-          <a
-            href={GITHUB_URL}
+          
+           <a href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
@@ -184,12 +228,14 @@ export function GithubContributions() {
             <select
               value={year}
               onChange={e => setYear(e.target.value)}
+              disabled={loading}
               className={cn(
                 'h-8 appearance-none rounded-lg border pl-3 pr-7 text-xs font-semibold cursor-pointer',
                 'border-neutral-200 bg-white text-neutral-700 outline-none transition-colors',
                 'hover:border-neutral-300 focus:border-neutral-400',
                 'dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200',
                 'dark:hover:border-neutral-600 dark:focus:border-neutral-500',
+                'disabled:opacity-50 disabled:cursor-not-allowed',
               )}
             >
               {years.map(y => (
@@ -211,14 +257,21 @@ export function GithubContributions() {
 
       {/* ── Stats row ── */}
       <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <StatCard label="Total"          value={stats.total.toLocaleString()} accent />
-        <StatCard label="Active Days"    value={stats.activeDays} />
-        <StatCard label="Longest Streak" value={`${stats.maxStreak}d`} />
-        <StatCard label="Current Streak" value={`${stats.curStreak}d`} />
+        <StatCard label="Total"          value={loading ? '...' : stats.total.toLocaleString()} accent />
+        <StatCard label="Active Days"    value={loading ? '...' : stats.activeDays} />
+        <StatCard label="Longest Streak" value={loading ? '...' : `${stats.maxStreak}d`} />
+        <StatCard label="Current Streak" value={loading ? '...' : `${stats.curStreak}d`} />
       </div>
 
       {/* ── Calendar ── */}
       <div ref={wrapRef} className="relative w-full overflow-x-auto pb-1">
+
+        {/* Loading overlay */}
+        {loading && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-white dark:bg-neutral-950 backdrop-blur-sm rounded-lg">
+            <div className="animate-spin rounded-full h-8 w-8 border-2 border-neutral-300 border-t-neutral-800 dark:border-neutral-700 dark:border-t-neutral-400" />
+          </div>
+        )}
 
         {/* Month labels */}
         <div className="flex" style={{ paddingLeft: DAY_OFFSET }}>
