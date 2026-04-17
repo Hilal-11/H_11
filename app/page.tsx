@@ -2,7 +2,6 @@ import Header from "@/components/Landing/Header";
 import Introduce from "@/components/Landing/Introduce";
 import { Reviews } from "@/components/Landing/Reviews";
 import { StripedPattern } from "@/components/magicui/striped-pattern";
-import ProductsShowcaseBento from "@/components/Landing/ProductsShowcaseBento";
 import Components from "@/components/Landing/Source/Components";
 import Templates from "@/components/Landing/Source/Templates";
 import Skills from "@/components/Landing/Skills";
@@ -11,6 +10,7 @@ import Footer from "@/components/Landing/Footer";
 import Certificates from "@/components/Landing/Certificates";
 import CTA from "@/components/Landing/CTA";
 import { FAQ } from "@/components/Landing/FAQ";
+import ProjectsSection from "@/components/Landing/Projects/ProjectsSection";
 export default function Home() {
   return (
     <div>
@@ -27,7 +27,7 @@ export default function Home() {
                 <StripedPattern/>
               </div>
               <div className="relative">
-                <ProductsShowcaseBento />
+                <ProjectsSection />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
