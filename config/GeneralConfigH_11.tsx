@@ -59,11 +59,6 @@ export const HEADER:IHeader[] = [
         navItem: "Custom Work",
         navLink: "/custom-work",
     },
-    {
-        id: 2,
-        navItem: "Lokallhost.io",
-        navLink: "https://locallhost.io",
-    },
 ]
 // social links
 interface ISocialLinks {
