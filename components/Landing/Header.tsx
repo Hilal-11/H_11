@@ -61,7 +61,6 @@ function Header() {
                 {
                     isMobileMenu && <div className='md:hidden lg:hidden w-[220px] h-[300px] bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
                     <div className='w-full h-auto flex flex-col space-y-2 px-2'> 
-                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Lokalhost.io</h1>
                         <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>About</h1>
                         <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Projects</h1>
                         <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Experiance</h1>
