@@ -46,57 +46,33 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Spinner } from "@/components/ui/spinner"
 import { FeedbackSchema } from '@/lib/definitions';
 import { toast, Toaster } from 'sonner'
 import { IoMdSend } from "react-icons/io"
-import { LuMessageSquare, LuBug, LuZap, LuPaintbrush, LuGauge, LuUser, LuFileText, LuLink, LuThumbsUp } from "react-icons/lu"
-import { TbHelpSquareRoundedFilled } from "react-icons/tb";
-/* ── topic config with icons ── */
-const TOPICS = [
-  { value: "bug_report",          label: "Report a Bug",                  Icon: LuBug },
-  { value: "feature_request",     label: "Feature Request",               Icon: LuZap },
-  { value: "improvement",         label: "Improvement Suggestion",        Icon: LuThumbsUp },
-  { value: "ui_ux_feedback",      label: "UI / UX Feedback",              Icon: LuPaintbrush },
-  { value: "performance_issue",   label: "Performance Issue",             Icon: LuGauge },
-  { value: "account_issue",       label: "Account / Login Issue",         Icon: LuUser },
-  { value: "content_issue",       label: "Content / Docs Issue",          Icon: LuFileText },
-  { value: "integration_problem", label: "Integration Problem",           Icon: LuLink },
-  { value: "general_feedback",    label: "General Feedback",              Icon: LuMessageSquare },
-  { value: "other",               label: "Other",                         Icon: TbHelpSquareRoundedFilled },
-]
+import { LuMessageSquare } from "react-icons/lu"
 
 const MAX_CHARS = 400
 
 function FeedbackLogic() {
-  const [feedbackTitle, setFeedbackTitle]           = useState('')
   const [feedbackDescription, setFeedbackDescription] = useState('')
   const [loading, setLoading]                       = useState(false)
   const [submitted, setSubmitted]                   = useState(false)
   const [focused, setFocused]                       = useState(false)
-  const [errors, setErrors] = useState({ feedback_title: '', feedback_discription: '' })
+  const [errors, setErrors] = useState({ feedback_discription: '' })
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const charCount   = feedbackDescription.length
   const charPercent = (charCount / MAX_CHARS) * 100
   const charColor   = charPercent > 90 ? '#ef4444' : charPercent > 70 ? '#f59e0b' : '#a3a3a3'
 
-  const selectedTopic = TOPICS.find(t => t.value === feedbackTitle)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
 
     const validated: any = FeedbackSchema.safeParse({
-      feedback_title: feedbackTitle,
       feedback_discription: feedbackDescription,
     })
     if (!validated.success) {
@@ -109,13 +85,12 @@ function FeedbackLogic() {
       const res = await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ feedback_title: feedbackTitle, feedback_discription: feedbackDescription }),
+        body: JSON.stringify({ feedback_discription: feedbackDescription }),
       })
       if (res.ok) {
         setSubmitted(true)
-        setFeedbackTitle('')
         setFeedbackDescription('')
-        setErrors({ feedback_title: '', feedback_discription: '' })
+        setErrors({ feedback_discription: '' })
         toast.success('Feedback submitted — thank you!')
         setTimeout(() => setSubmitted(false), 3000)
       }
@@ -146,13 +121,13 @@ function FeedbackLogic() {
           />
 
           {/* ── Header ── */}
-          <CardHeader className="pb-3 pt-5 px-5">
+          <CardHeader className="pt-5 px-5">
             {/* title row */}
             <motion.div
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="flex items-center gap-2 mb-3"
+              className="flex items-center gap-2"
             >
               <motion.div
                 animate={{ rotate: [0, -8, 8, 0] }}
@@ -163,64 +138,9 @@ function FeedbackLogic() {
               </motion.div>
               <div>
                 <h2 className="text-sm font-sans font-bold text-neutral-800 dark:text-neutral-200 leading-none">
-                  Share Feedback
+                  Share Your Feedback or any quary
                 </h2>
-                <p className="text-[11px] font-sans text-neutral-400 dark:text-neutral-600 mt-0.5">
-                  Help us improve lokalhost.io
-                </p>
               </div>
-            </motion.div>
-
-            {/* topic select */}
-            <motion.div
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.18 }}
-            >
-              <Select onValueChange={(v) => { setFeedbackTitle(v); setErrors(p => ({ ...p, feedback_title: '' })) }} value={feedbackTitle}>
-                <SelectTrigger className={`w-full text-sm transition-all duration-200 ${errors.feedback_title ? 'border-red-400 dark:border-red-500' : ''}`}>
-                  <div className="flex items-center gap-2">
-                    <AnimatePresence mode="wait">
-                      {selectedTopic ? (
-                        <motion.span
-                          key={selectedTopic.value}
-                          initial={{ opacity: 0, scale: 0.7 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.7 }}
-                          transition={{ duration: 0.15 }}
-                          className="text-neutral-500 dark:text-neutral-400"
-                        >
-                          <selectedTopic.Icon className="text-sm" />
-                        </motion.span>
-                      ) : null}
-                    </AnimatePresence>
-                    <SelectValue placeholder="Select a topic…" />
-                  </div>
-                </SelectTrigger>
-                <SelectContent>
-                  {TOPICS.map(({ value, label, Icon }) => (
-                    <SelectItem key={value} value={value}>
-                      <div className="flex items-center gap-2">
-                        <Icon className="text-sm text-neutral-500" />
-                        <span>{label}</span>
-                      </div>
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <AnimatePresence>
-                {errors.feedback_title && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -4 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-[10px] text-red-500 font-medium mt-1 pl-0.5"
-                  >
-                    {errors.feedback_title}
-                  </motion.p>
-                )}
-              </AnimatePresence>
             </motion.div>
           </CardHeader>
 
@@ -295,15 +215,6 @@ function FeedbackLogic() {
 
           {/* ── Footer ── */}
           <CardFooter className="px-5 pb-5 pt-2 flex flex-wrap justify-between items-center lg: gap-2 ">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-              className="text-[10px] font-sans text-neutral-400 dark:text-neutral-600"
-            >
-              Anonymous · not stored with account
-            </motion.p>
-
             <motion.button
               onClick={handleSubmit}
               disabled={loading || submitted}
