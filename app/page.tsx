@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <div className="w-full h-auto border-t bg-neutral-50 dark:bg-neutral-950 px-2 flex flex-col items-center mx-auto pt-4">
-        <div className="md:container lg:w-7xl w-full h-auto border-l border-r border-neutral-300 dark:border-neutral-800 mt-4">
+        <div className="md:container lg:w-8xl w-full h-auto border-l border-r border-neutral-300 dark:border-neutral-800 mt-4">
             <Header/>
             <div className="mt-14 relative">
               <Introduce/>
