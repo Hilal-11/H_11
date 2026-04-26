@@ -145,7 +145,7 @@ function Page() {
 
 
         <div className='pt-10 '>
-            <AnnoncementBadge aboutBadge='Custom Work Build someting lets talk!' />
+            <AnnoncementBadge aboutBadge='Custom Work Build someting lets talk!' link="/custom-work" />
         </div>
         <div className="w-full mx-auto text-center pt-10 px-4 lg:px-10">
       <div

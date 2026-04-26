@@ -29,7 +29,7 @@ function Introduce() {
     <div id="top" className='relative w-full  border-b border-neutral-300 dark:border-neutral-800'>
       <div className='h-auto'>
     
-       <AnnoncementBadge aboutBadge="Currently available for client work & collaborations" />
+       <AnnoncementBadge aboutBadge="Currently available for client work & collaborations" link="/custom-work" />
 
 
         <div className='mt-5 w-full h-full grid grid-cols-1 lg:grid-cols-3 justify-between overflow-hidden'>
