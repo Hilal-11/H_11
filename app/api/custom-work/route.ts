@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { validateCustomWorkData } from '@/lib/definitions';
-import CustomWork from '@/lib/models/custom-work';
+import CustomWork from '@/lib/models/enquiry';
 import dbConnect from "@/lib/database";
 export const dynamic = 'force-dynamic'; 
 export async function POST(request: NextRequest) {
