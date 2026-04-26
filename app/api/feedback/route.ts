@@ -7,8 +7,8 @@ export const POST = async (request: Request) => {
     await dbConnect();
 
     const body = await request.json();
-    const { feedback_title, feedback_discription } = body;
-    if (!feedback_title || !feedback_discription) {
+    const { feedback_discription } = body;
+    if (!feedback_discription) {
       return NextResponse.json(
         { message: "Please give the correct feedback" },
         { status: 400 }
@@ -16,7 +16,6 @@ export const POST = async (request: Request) => {
     }
 
     const response = await Feedback.create({
-        feedback_title,
         feedback_discription
     });
     return NextResponse.json(
