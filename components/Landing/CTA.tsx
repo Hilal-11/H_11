@@ -134,7 +134,7 @@ function CTA() {
 
               {/* Secondary — light */}
               <Link
-                href="/templates"
+                href="/custom-work"
                 className="
                   group relative flex items-center gap-2.5
                   px-5 py-2.5 rounded-lg overflow-hidden
