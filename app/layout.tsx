@@ -5,6 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import GoToTop from "@/components/MicroComponents/GotoTop";
 import TopLoader from "@/components/MicroComponents/Loading";
 import { FeedbackMobile } from "@/components/MicroComponents/Feedback";
+import Header from "@/components/Landing/Header"
+import Footer from "@/components/Landing/Footer"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,11 +43,13 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
+            <Header/>
           <GoToTop />
           <FeedbackMobile />
           <TopLoader />
           
           {children}
+        <Footer />
         </ThemeProvider>
       </body>
     </html>
