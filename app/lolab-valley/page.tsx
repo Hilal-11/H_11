@@ -92,6 +92,11 @@ const items = [
     image: "/lolab3.jpg",
     className: "absolute top-[18%] right-[8%] rotate-[-7deg]",   // ← was overlapping
   },
+    {
+    title: "",
+    image: "/danish.jpeg",
+    className: "absolute top-[18%] right-[30%] rotate-[-7deg]",   // ← was overlapping
+  },
 ];
   return (
     <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
