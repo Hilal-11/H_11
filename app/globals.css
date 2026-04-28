@@ -83,6 +83,15 @@
     transform: rotate(360deg);
   }
 }
+@keyframes gradient-x {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s linear infinite;
+}
 
 @custom-variant dark (&:is(.dark *));
 

@@ -35,27 +35,59 @@ function Introduce() {
         <div className='mt-5 w-full h-full grid grid-cols-1 lg:grid-cols-3 justify-between overflow-hidden'>
           <div className='order-2 lg:order-none col-span-2 w-full py-4 lg:px-6 px-3'>
             <div className=''>
-               <h1 className='font-mono text-4xl font-bold'>HILAL H_11</h1>
-               <p className='text-xs lg:text-[13px] font-medium font-mono pt-2 text-neutral-500 dark:text-neutral-400'>I’m a Software Engineer and Senior Frontend Developer with a strong focus on building scalable, production-ready web and mobile applications. I specialize in modern frontend technologies, design systems, and performance-driven UI engineering.</p>
-               <p className='pt-5 text-xs lg:text-[13px] font-medium font-mono font-light text-neutral-500 dark:text-neutral-400'>Currently, I’m open to freelance and remote opportunities where I can collaborate with teams to build meaningful, high-impact products.</p>
+               <h1 className='font-sans text-4xl font-bold'>HILAL H_11</h1>
+               <p className='text-xs lg:text-[14px] font-medium font-sans pt-2 text-neutral-500 dark:text-neutral-400'>I’m a Software Engineer and Senior Frontend Developer with a strong focus on building scalable, production-ready web and mobile applications. I specialize in modern frontend technologies, design systems, and performance-driven UI engineering.</p>
+               <p className='pt-5 text-xs lg:text-[14px] font-medium font-sans font-light text-neutral-500 dark:text-neutral-400'>Currently, I’m open to freelance and remote opportunities where I can collaborate with teams to build meaningful, high-impact products.</p>
                <div className='mt-4'>
                 <ContainerTextFlip />
                </div>
                <div className='w-full h-full grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 pt-6'>
-                {INTRODUCE.map(({option, Icon }) => (
+                {INTRODUCE.map(({ option, Icon, link, resume }) => (
                   <div key={option} className='flex py-[5px] items-center'>
-                    <p className="flex items-center justify-left font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
+                    <p className="flex items-center justify-left font-sans font-medium text-[14px] gap-4 text-neutral-600 dark:text-neutral-400">
+                      
+                      {/* Icon Box */}
                       <span className='text-sm bg-white dark:bg-black rounded-sm p-[4px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
                         <Icon />
                       </span>
-                      {option}
+
+                      {/* Resume download */}
+                      {resume ? (
+                        
+                          <a href={`/${resume}`}
+                          download
+                          className="group flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200"
+                        >
+                          <HighlightAt text={option} />
+                        </a>
+
+                      /* External/internal link */
+                      ) : link ? (
+                        <Link
+                          href={link}
+                          target={link.startsWith("http") ? "_blank" : undefined}
+                          rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="group flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200"
+                        >
+                          <HighlightAt text={option} />
+                          <span className="opacity-0 -translate-x-1 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-200 text-[10px]">
+                            ↗
+                          </span>
+                        </Link>
+
+                      /* Plain text */
+                      ) : (
+                        <span>{option}</span>
+                      )}
+
                     </p>
                   </div>
                 ))}
+
                   <div className='mt-[6px] flex gap-2'>
                     {
                       SOCIAL_LINKS.map(({id , social_link , Icon}) => (
-                        <Link href={social_link}key={id} target='_blank' className="flex items-center justify-left font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
+                        <Link href={social_link}key={id} target='_blank' className="flex items-center justify-left font-sans font-medium text-[14px] gap-4 text-neutral-600 dark:text-neutral-400">
                           <span className='text-sm bg-white dark:bg-black rounded-sm p-[4px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
                             <Icon />
                           </span>
@@ -67,7 +99,7 @@ function Introduce() {
 
 
               <div className='mt-[6px] flex flex flex-wrap gap-2 py-[5px] items-start'>
-                    <p className="whitespace-nowrap flex items-center justify-left font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
+                    <p className="whitespace-nowrap flex items-center justify-left font-sans font-medium text-[14px] gap-4 text-neutral-600 dark:text-neutral-400">
                       <span className='text-sm bg-white dark:bg-black rounded-sm p-[4px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
                         <MdStars />
                       </span>
@@ -75,7 +107,7 @@ function Introduce() {
                     </p>
                     <div className='w-full flex flex-wrap gap-1 '>
                       {techRoles.techRoles.map((techRole , index) => (
-                        <span key={index} className='text-[10px] bg-white dark:bg-black rounded-sm px-2 py-[2px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300 font-mono'>{techRole}</span>
+                        <span key={index} className='text-[12px] bg-white dark:bg-black rounded-sm px-2 py-[2px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300 font-sans'>{techRole}</span>
                       ))}
                     </div>
               </div>
@@ -364,4 +396,34 @@ export function GithubRepos() {
 
     </div>
   )
+}
+
+function HighlightAt({ text }: { text: string }) {
+  const parts = text.split(/(@\S+)/g);
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.startsWith("@") ? (
+          <span key={i} className="relative inline-flex items-center group/tag">
+            {/* Glow behind */}
+            <span className="absolute inset-0 rounded-sm bg-gradient-to-r from-red-500/20 via-orange-400/20 to-amber-400/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            {/* Gradient text */}
+            <span
+              className="relative font-bold bg-gradient-to-r from-red-500 via-orange-400 to-amber-400 bg-clip-text text-transparent
+                bg-[length:200%_auto] animate-gradient-x
+                after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full
+                after:bg-gradient-to-r after:from-red-500 after:via-orange-400 after:to-amber-400
+                after:rounded-full after:opacity-60"
+            >
+              {part}
+            </span>
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
 }

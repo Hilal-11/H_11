@@ -111,6 +111,7 @@ export interface IntroduceItem {
   languages?: string[];
   techRoles?: string[];
   resume?: string;
+  link?: string;
 }
 export const INTRODUCE:IntroduceItem[] = [
     {
@@ -119,18 +120,21 @@ export const INTRODUCE:IntroduceItem[] = [
     },
     {
         option: "Founder and creator of @Lokalhost.io",
-        Icon: PiTerminalDuotone
+        Icon: PiTerminalDuotone,
+        link: "https://lokalhost-io-i2di.vercel.app/"
 
     },
    
     {
-        option: "Available for Freelance & Remote Work",
+        option: "Available for Freelance & Remote Work @custom-work",
         Icon: MdWorkOutline,
+        link: "/custom-work"
     },
 
     {
         option: "India Kashmir | kupwara @lolab_valley",
-        Icon: IoLocation
+        Icon: IoLocation,
+        link: "/lolab-valley"
 
     },
     {
