@@ -25,7 +25,7 @@ export function ScheduleCallModal({ scheduleCallOpen, setScheduleCallOpen }: Pro
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm overflow-y-scroll"
             onClick={() => setScheduleCallOpen(false)}
           />
 
@@ -35,7 +35,7 @@ export function ScheduleCallModal({ scheduleCallOpen, setScheduleCallOpen }: Pro
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 30 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed z-50 inset-x-0 top-20 mx-auto w-[92%] lg:w-[68%] max-w-3xl h-[780px] rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 shadow-2xl overflow-hidden flex flex-col"
+            className="fixed z-50 inset-x-0 top-20 mx-auto w-[92%] lg:w-[68%] max-w-3xl h-[80%] lg:h-[780px] rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 shadow-2xl overflow-y-scroll flex flex-col"
           >
             <button
               onClick={() => setScheduleCallOpen(false)}

@@ -148,7 +148,7 @@ const saveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   };
 
   return (
-    <div className="flex flex-col h-full pt-6 ">
+    <div className="flex flex-col h-full pt-6 overflow-y-auto">
       <ProgressBar currentStep={step} />
 
       <div className="flex-1 overflow-y-auto px-6 py-5">
