@@ -54,6 +54,11 @@ export const HEADER:IHeader[] = [
         navItem: "Custom Work",
         navLink: "/custom-work",
     },
+    {
+        id: 9,
+        navItem: "Contact me",
+        navLink: "/contact",
+    },
 ]
 // social links
 interface ISocialLinks {

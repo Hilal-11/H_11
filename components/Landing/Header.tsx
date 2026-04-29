@@ -29,7 +29,7 @@ function Header() {
             <div className='w-[80%] flex gap-4 items-center justify-end relative'>
             {
                 HEADER.map((item) => (
-                    <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>{item.navItem}</Link>
+                    <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-sans font-medium text-sm text-neutral-800 dark:text-neutral-200'>{item.navItem}</Link>
                 ))
             }
                 <div className='flex gap-1'>
@@ -66,7 +66,7 @@ function Header() {
                         <Link href="/custom-work" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Custom Work</Link>
                         <Link href="/components" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</Link>
                         <Link href="/templates" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</Link>
-                        <Link href="#" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Contect me</Link>
+                        <Link href="/contact" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Contect me</Link>
 
                         <div className='flex gap-2 w-full'>
                         {
