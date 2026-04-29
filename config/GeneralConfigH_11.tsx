@@ -35,11 +35,6 @@ interface IHeader {
 }
 export const HEADER:IHeader[] = [
     {
-      id: 1,
-      navItem: "Projects",
-      navLink: "/work",
-    },
-    {
         id: 3,
         navItem: "Components",
         navLink: "/components",
