@@ -64,15 +64,9 @@ function Header() {
                     <div className='w-full h-auto flex flex-col space-y-2 px-3 py-3 pb-3'> 
                         
                         <Link href="/custom-work" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Custom Work</Link>
-                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Projects</h1>
-                        <h1 className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Experiance</h1>
-
-                        <div className='w-full h-auto bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm grid grid-cols-2 gap-1 px-1 justify-between'>
-                            <p className='text-[13px] font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Templates</p>
-                            <p className='text-[13px] font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Components</p>
-                            <p className='text-[13px] font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Designs</p>
-                            <p className='text-[13px] font-sans font-medium bg-neutral-200 dark:bg-neutral-950 px-2 py-1 rounded-sm'>Mobile apps</p>
-                        </div>
+                        <Link href="/components" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</Link>
+                        <Link href="/templates" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</Link>
+                        <Link href="#" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Contect me</Link>
 
                         <div className='flex gap-2 w-full'>
                         {
