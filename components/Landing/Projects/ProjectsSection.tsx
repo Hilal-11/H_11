@@ -97,7 +97,7 @@ function ProjectsSection() {
                     </div>
                 </div>
             </div>
-            <div className="relative h-[430px] relative p-2 border-r border-neutral-300 dark:border-neutral-800 ">
+            <div className="relative h-[430px] p-2 border-r border-neutral-300 dark:border-neutral-800 ">
                 <div className='overflow-hidden'>
                      <NoiseTexture
                         className={cn(
@@ -126,7 +126,7 @@ function ProjectsSection() {
                 </div>
             </div>
             <div className="h-[430px] relative">
-                <div className='relative w-full h-[400px] [mask-image:radial-gradient(circle,rgba(0,0,0,1)_60%,rgba(0,0,0,0)_85%)] bg-white/40 dark:bg-black/40 backdrop-blur-md'>
+                <div className=' [mask-image:radial-gradient(circle,rgba(0,0,0,1)_60%,rgba(0,0,0,0)_85%)] bg-white/40 dark:bg-black/40 backdrop-blur-md'>
                     <StripedPattern />
                   
                 <div className='lg:px-10 px-5 [perspective:800px] [transform-style:preserve-3d] absolute bottom-10 z-40'>
@@ -163,7 +163,7 @@ function ProjectsSection() {
                     }}
                  className="flex w-full h-full items-start justify-center px-4 pt-5 relative ">
                   <Image width={400} height={400} className="z-10 rounded-sm object-cover w-[200px] absolute -left-10 top-18 border " alt="templates" src="/hero-block-1-light.webp" />
-                  <img  className="border-2 z-20 rounded-sm object-cover w-[380px]" alt="templates" src="/hero-block-4-light.webp" />
+                    <img  className="border-2 z-20 rounded-sm object-cover w-full max-w-[380px]" alt="templates" src="/hero-block-4-light.webp" />
                   <Image width={400} height={400} className="z-10 rounded-sm object-cover w-[200px] absolute -right-10 top-14 border" alt="templates" src="/hero-block-10-light.webp" />
                 </motion.div>
               </div>

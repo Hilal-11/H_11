@@ -19,14 +19,14 @@ function Header() {
     const { theme, setTheme } = useTheme();
     const [isMobileMenu , setIsMobileMenu] = useState(false)
   return (
-    <div id="top" className='z-50 backdrop-blur-sm fixed top-1 inset-0 flex items-center justify-between w-full h-[56px]  border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
+    <div id="top" className='z-50 backdrop-blur-sm fixed top-1 left-0 right-0 overflow-hidden flex items-center justify-between w-full h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
         <div className='md:container lg:w-8xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
             <div className='w-[30%] flex justify-start'>
                <Link href="/" className='relative right-16 lg:right-20 top-0 '>
                  { theme === 'light' ? <LogoSvgLight/> : <LogoSvgDark/>}
                </Link>
             </div>
-            <div className='w-[80%] flex gap-4 items-center justify-end relative'>
+            <div className='w-[70%] flex gap-4 items-center justify-end relative'>
             {
                 HEADER.map((item) => (
                     <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-sans font-medium text-sm text-neutral-800 dark:text-neutral-200'>{item.navItem}</Link>
