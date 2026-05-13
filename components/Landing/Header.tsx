@@ -60,37 +60,38 @@ function Header() {
 
                 </div>
                 {
-                    isMobileMenu && <div className='md:hidden lg:hidden w-[230px] h-auto bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
-                    <div className='w-full h-auto flex flex-col space-y-2 px-3 py-3 pb-3'> 
-                        
-                        <Link href="/custom-work" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Custom Work</Link>
-                        <Link href="/components" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</Link>
-                        <Link href="/templates" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</Link>
-                        <Link href="/contact" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Contect me</Link>
+                    isMobileMenu && 
+                    <div className='z-50 md:hidden lg:hidden w-[230px] h-auto bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
+                        <div className='w-full h-auto flex flex-col space-y-2 px-3 py-3 pb-3'> 
+                            
+                            <Link href="/custom-work" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Custom Work</Link>
+                            <Link href="/components" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</Link>
+                            <Link href="/templates" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</Link>
+                            <Link href="/contact" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Contect me</Link>
 
-                        <div className='flex gap-2 w-full'>
-                        {
-                        SOCIAL_LINKS.map(({id , social_link , Icon}) => (
-                            <Link href={social_link}key={id} target='_blank' className="w-full flex items-center justify-betweeen font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
-                            <span className='text-[18px] bg-neutral-100 dark:bg-neutral-800 rounded-sm p-[5px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
-                                <Icon />
-                            </span>
-                            </Link>
-                        ))
-                        }
+                            <div className='flex gap-2 w-full'>
+                            {
+                            SOCIAL_LINKS.map(({id , social_link , Icon}) => (
+                                <Link href={social_link}key={id} target='_blank' className="w-full flex items-center justify-betweeen font-mono font-medium text-[13px] gap-4 text-neutral-600 dark:text-neutral-400">
+                                <span className='text-[18px] bg-neutral-100 dark:bg-neutral-800 rounded-sm p-[5px] border-2 border-neutral-200 dark:border-neutral-900 flex items-center justify-center text-neutral-800 dark:text-neutral-300'>
+                                    <Icon />
+                                </span>
+                                </Link>
+                            ))
+                            }
+                        </div>
+                        <div className='flex justify-center items-center pt-2'>
+                            <button onClick={() => router.push('/Hilal.pdf')} className={cn(
+                                "pr-2 px-1 font-sans font-medium border shadow-sm rounded-sm h-8 w-full flex justify-between items-center flex-shrink-0",
+                                "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
+                                "border-t border-l border-r border-neutral-800 dark:border-neutral-700 text-neutral-100",
+                                "transition-all duration-300 ease-in-out",
+                                "group-hover:translate-x-[128px] group-hover:rotate-[360deg]"
+                                )}
+                            ><span className='bg-neutral-200 rounded-sm h-6 w-6 text-neutral-950 flex justify-center items-center'><MdOutlineFileDownload /></span>Download Resume</button>
+                        </div>
+                        </div>
                     </div>
-                    <div className='flex justify-center items-center pt-2'>
-                        <button onClick={() => router.push('/Hilal.pdf')} className={cn(
-                            "pr-2 px-1 font-sans font-medium border shadow-sm rounded-sm h-8 w-full flex justify-between items-center flex-shrink-0",
-                            "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
-                            "border-t border-l border-r border-neutral-800 dark:border-neutral-700 text-neutral-100",
-                            "transition-all duration-300 ease-in-out",
-                            "group-hover:translate-x-[128px] group-hover:rotate-[360deg]"
-                            )}
-                        ><span className='bg-neutral-200 rounded-sm h-6 w-6 text-neutral-950 flex justify-center items-center'><MdOutlineFileDownload /></span>Download Resume</button>
-                    </div>
-                    </div>
-                </div>
                 }
 
             </div>
