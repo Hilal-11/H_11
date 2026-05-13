@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { cn } from '@/lib/utils';
 import { StripedPattern } from '@/components/magicui/striped-pattern';
 import { FlickeringGrid } from '@/components/ui/flickering-grid';
@@ -9,8 +10,20 @@ import { motion } from "motion/react"
 import { MdOutlineTerminal } from "react-icons/md";
 import Link from 'next/link';
 function ProjectsSection() {
+
+const gridRef = useRef<HTMLDivElement>(null)
+const [gridWidth, setGridWidth] = useState(400)
+
+useEffect(() => {
+  if (!gridRef.current) return
+  const observer = new ResizeObserver(([entry]) => {
+    setGridWidth(entry.contentRect.width)
+  })
+  observer.observe(gridRef.current)
+  return () => observer.disconnect()
+}, [])
   return (
-    <div className='w-full h-full border relative px-4 pb-10'>
+    <div className='w-full h-full border border-neutral-300 dark:border-neutral-800 relative px-4 pb-10'>
         <div className='w-full py-4 px-5'>
             <h1 className='text-5xl font-bold font-mono text-left'>Products I build.</h1>
         </div>
@@ -49,21 +62,19 @@ function ProjectsSection() {
         <div className="w-full h-auto grid grid-cols-1 md:grid-cols-3 border border-neutral-300 dark:border-neutral-800 rounded-bl-sm rounded-br-sm">
 
             <div className="h-[430px] relative p-5 border-r border-neutral-300 dark:border-neutral-800">
-                <div>
+                  <div ref={gridRef}>
                     <FlickeringGrid
-                        className="relative inset-0 z-0 [mask-image:radial-gradient(circle,rgba(0,0,0,1)_60%,rgba(0,0,0,0)_85%)]
-                            bg-white/40 dark:bg-black/40
-                            backdrop-blur-md"
-                        squareSize={4}
-                        gridGap={6}
-                        color="#262626"
-                        maxOpacity={0.5}
-                        flickerChance={0.1}
-                        height={300}
-                        width={400}
+                      className="relative inset-0 z-0 [mask-image:radial-gradient(circle,rgba(0,0,0,1)_60%,rgba(0,0,0,0)_85%)]
+                          bg-white/40 dark:bg-black/40 backdrop-blur-md"
+                      squareSize={4}
+                      gridGap={6}
+                      color="#262626"
+                      maxOpacity={0.5}
+                      flickerChance={0.1}
+                      height={300}
+                      width={gridWidth}  // ✅ now matches container on all screen sizes
                     />
-                  
-                </div>
+                  </div>
                 <div className='grid grid-cols-2 items-start h-[400px] w-full absolute top-0 left-0 pt-6 px-6'>
                   <div className=''><CliIllustration /></div>
                   <div><ThemeSplitIllustration /></div>
