@@ -19,7 +19,7 @@ function Header() {
     const { theme, setTheme } = useTheme();
     const [isMobileMenu , setIsMobileMenu] = useState(false)
   return (
-    <div id="top" className='z-50 backdrop-blur-sm fixed top-1 left-0 right-0 overflow-hidden flex items-center justify-between w-full h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
+    <div id="top" className='z-50 backdrop-blur-sm fixed top-1 left-0 right-0 flex items-center justify-between w-full h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
         <div className='md:container lg:w-8xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
             <div className='w-[30%] flex justify-start'>
                <Link href="/" className='relative right-16 lg:right-20 top-0 '>
