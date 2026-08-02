@@ -5,8 +5,6 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 import { SiFoodpanda } from "react-icons/si";
 import { cn } from  "@/lib/utils"
 import Link from 'next/link';
-import ScrollBasedVelocityImagesDemo from '@/components/Landing/ScrollBasedOnVelocity';
-import { NoiseTexture } from '@/components/ui/noise-texture'
 
 const HEADLINES = [
   { pre: 'Beautiful ',    hi: 'UI Components & Blocks',       post: '\nready to drop into your project.'     },
@@ -87,94 +85,36 @@ const HEADLINES = [
     ],
   }
 
-const components = [
-    {
-        id: 1,
-        component_name: "Draggable Card",
-        about_component: "A visual diary of my journey through code, travel, and everyday thoughts",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/Hero_Scroll_xzhqrj.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 2,
-        component_name: "Shaders",
-        about_component: "A set of customizable shader components for advanced visual effects",
-        component_image: "https://assets.aceternity.com/pro/shaders.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 3,
-        component_name: "Parallax Hero Images",
-        about_component: "A set of parallax hero image components for dynamic web design",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 4,
-        component_name: "Terminal",
-        about_component: "A customizable terminal component for interactive command-line interfaces",
-        component_image: "https://assets.aceternity.com/compare.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 5,
-        component_name: "3D Card Effect",
-        about_component: "A set of 3D card effect components for engaging user interfaces",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/3d-card.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 6,
-        component_name: "Feature Sections",
-        about_component: "A collection of feature section components for showcasing product features",
-        component_image: "https://assets.aceternity.com/components/features-section-with-skeletons.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 7,
-        component_name: "Testimonials",
-        about_component: "A set of testimonial components for displaying customer feedback",
-        component_image: "https://assets.aceternity.com/world-map.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 8,
-        component_name: "3D World Globe",
-        about_component: "A customizable 3D world globe component for interactive maps and data visualization",
-        component_image: "https://assets.aceternity.com/components/3d-globe.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 9,
-        component_name: "Animated Backgrounds",
-        about_component: "A collection of animated background components for dynamic web design",
-        component_image: "https://assets.aceternity.com/background-ripple-effect.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 10,
-        component_name: "Custom Scrollbars",
-        about_component: "A set of customizable scrollbar components for enhanced user experience",
-        component_image: "https://assets.aceternity.com/draggable-card.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-
-    },
-    {
-        id: 11,
-        component_name: "Interactive Maps",
-        about_component: "A collection of interactive map components for geospatial data visualization",
-        component_image: "https://assets.aceternity.com/pro/testimonials.png",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    },
-    {
-        id: 12,
-        component_name: "Loading Spinners",
-        about_component: "A set of customizable loading spinner components for indicating progress",
-        component_image: "https://assets.aceternity.com/components/scales.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    }
-   
-]
+export interface TemplateCard {
+  id: string;
+  template_name: string;
+  template_image: string;
+  template_live_url: string;
+}
+export const get_templates = "https://lokalhost-io-i2di.vercel.app/templates";
+export const templates: TemplateCard[] = [
+  {
+    id: "hilal-h-11-developer-portfolio",
+    template_name: "Hilal-H11",
+    template_image:
+      "https://res.cloudinary.com/dou5rypdf/image/upload/v1770502608/Screenshot_2026-02-08_033644_twuacw.png",
+    template_live_url: "https://hila-11.com",
+  },
+  {
+    id: "keep-notes-landing-page",
+    template_name: "Keep — Notes App Landing Page",
+    template_image:
+      "https://res.cloudinary.com/dou5rypdf/image/upload/v1782421927/Screenshot_2026-06-23_190731_puwxwa.png",
+    template_live_url: "https://keep-khaki-eta.vercel.app/",
+  },
+  {
+    id: "trendy-academy-nextjs-001",
+    template_name: "Trendy Academy — CS & IT Institute Website",
+    template_image:
+      "https://res.cloudinary.com/dou5rypdf/image/upload/v1780319623/01.06.2026_18.43.12_REC_w13rbw.png",
+    template_live_url: "https://trendy-academy.vercel.app/",
+  },
+];
 
 function Page() {
 
@@ -296,12 +236,6 @@ function Page() {
         <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
           <StripedPattern/>
         </div>
-        <div className='pt-5  w-full mx-auto'>
-          <ScrollBasedVelocityImagesDemo />
-        </div>
-        <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
-          <StripedPattern/>
-        </div>
 
         
               {/* Components list  */}
@@ -312,62 +246,72 @@ function Page() {
                 </div>
               <div className='w-full h-auto pt-6 pb-10 grid grid-cols-1 lg:grid-cols-4 justify-center gap-10 px-5 w-full mx-auto'>
                 
-                {components.map((item) => (
+                {templates.map((item) => (
                     <div key={item.id} className='mx-auto cursor-pointer relative lg:w-[360px] h-[420px] w-full rounded-xl border overflow-hidden border
             transition-all duration-300 ease-in-out
             hover:scale-[1.03]
             hover:shadow-sm
             hover:bg-neutral-200 hover:dark:bg-neutral-900'>
-                        <NoiseTexture
-                                className={cn(
-                                "dark:hidden absolute inset-0 z-10",
-                                "mask-[radial-gradient(420px_circle_at_center,white,transparent)]"
-                                )}
-                            />
-                        {/* Top 60% — Image */}
-                        <div className="h-[60%] w-full border-b z-40">
+                        {/* Top 70% — Image */}
+                        <div className="h-[70%] w-full border-b z-40">
                         <img
-                            src={item.component_image}
-                            alt={item.component_name}
+                            src={item.template_image}
+                            alt={item.template_name}
                             className="w-full h-full object-cover"
                         />
                         </div>
         
-                        {/* Bottom 40% — Info */}
-                        <div className="z-50 h-[40%] w-full px-4 py-3 flex flex-col justify-between">
-                            
-                        <div>
-                            <h3 className="font-sans text-lg font-semibold text-base">{item.component_name}</h3>
-                            <p className="font-sans text-sm mt-1">
-                            {item.about_component}
-                            </p>
-                        </div>
-        
-                        <div className="flex justify-end gap-4">
-                            <Link href="https://lokalhost-io-i2di.vercel.app/docs" target="_blank"
-                                className={cn(
-                                "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
-                                "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
-                                "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
-                                "text-neutral-100",
-                                "shadow-[0_1px_2px_rgba(0,0,0,0.3),0_4px_8px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]",
-                                "hover:shadow-[0_4px_16px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]",
-                                "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
-                                "transition-all duration-200"
-                                )}>Lokalhost.io</Link>
-                            <Link href="https://lokalhost-io-i2di.vercel.app/docs" target="_blank"
-                                className={cn(
-                                "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
-                                "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
-                                "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
-                                "text-neutral-100",
-                                "shadow-[0_1px_2px_rgba(0,0,0,0.3),0_4px_8px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]",
-                                "hover:shadow-[0_4px_16px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]",
-                                "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
-                                "transition-all duration-200"
-                                )}>Docs </Link>
-                        </div>
-                        </div>
+                        {/* Bottom 30% — Info */}
+                        <div className="z-50 h-[30%] w-full px-4 py-3 flex flex-col justify-between">
+        <div>
+          <h3 className="font-sans text-lg font-semibold text-base text-neutral-800 dark:text-neutral-200 truncate">
+            {item.template_name}
+          </h3>
+        </div>
+
+        <div className="flex items-center justify-between gap-3">
+          {/* Demo — icon only, bottom left */}
+          <Link
+            href={item.template_live_url}
+            target="_blank"
+            aria-label={`View ${item.template_name} live demo`}
+            className={cn(
+              "flex items-center justify-center w-7 h-7 rounded-lg shrink-0",
+              "border-t border-l border-r border-neutral-300 dark:border-neutral-700",
+              "bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900",
+              "text-neutral-600 dark:text-neutral-300",
+              "shadow-[0_1px_2px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.5)]",
+              "dark:shadow-[0_1px_2px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]",
+              "hover:from-neutral-50 hover:to-neutral-200 dark:hover:from-neutral-700 dark:hover:to-neutral-800",
+              "hover:text-neutral-900 dark:hover:text-neutral-100",
+              "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.95]",
+              "transition-all duration-150"
+            )}
+          >
+            <LuEye className="w-4 h-4" />
+          </Link>
+
+          {/* Get Template — goes to lokalhost.io templates listing */}
+          <Link
+            href={get_templates}
+            target="_blank"
+            className={cn(
+              "flex-1 flex items-center justify-center gap-1.5",
+              "cursor-pointer font-sans font-medium text-sm px-3 py-1 rounded-lg",
+              "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
+              "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
+              "text-neutral-100",
+              "shadow-[0_1px_2px_rgba(0,0,0,0.3),0_4px_8px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]",
+              "hover:shadow-[0_4px_16px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]",
+              "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+              "transition-all duration-200"
+            )}
+          >
+            Get Template
+            <HiOutlineExternalLink className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </div>
                     </div>
                     ))}
               </div>
@@ -414,7 +358,7 @@ export default Page
 import { PlusIcon } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import { PiTerminalFill } from "react-icons/pi"
-import { LuExternalLink } from "react-icons/lu"
+import { LuExternalLink, LuEye } from "react-icons/lu"
 import { Accordion, AccordionContent, AccordionItem } from '@/components/ui/accordion'
 
 interface Link {
@@ -523,7 +467,7 @@ function FaqBlock({
 
 
 import React from "react";
-import { HiArrowRight, HiLightningBolt } from "react-icons/hi";
+import { HiArrowRight, HiLightningBolt, HiOutlineExternalLink } from "react-icons/hi";
 import { StripedPattern } from "@/components/magicui/striped-pattern";
 // ─── Corner bracket decoration ────────────────────────────────────────────────
 function CornerBracket({ className = "" }: { className?: string }) {

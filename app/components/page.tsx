@@ -12,90 +12,95 @@ import { motion } from "motion/react"
 const components = [
     {
         id: 1,
-        component_name: "Draggable Card",
-        about_component: "A visual diary of my journey through code, travel, and everyday thoughts",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/Hero_Scroll_xzhqrj.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
+        component_name: "Download Button",
+        about_component: "A list of download button components with various styles and animations",
+        component_image: "/components-images/download-buttons.png",
+        component_docs_link: "",
     },
     {
         id: 2,
-        component_name: "Shaders",
-        about_component: "A set of customizable shader components for advanced visual effects",
-        component_image: "https://assets.aceternity.com/pro/shaders.webp",
+        component_name: "Code Blocks",
+        about_component: "A set of customizable code block components for displaying code snippets",
+        component_image: "/components-images/code-block-b.png",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 3,
-        component_name: "Parallax Hero Images",
-        about_component: "A set of parallax hero image components for dynamic web design",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.webp",
+        component_name: "Code Preview Block",
+        about_component: "A set of customizable code preview components for displaying code snippets",
+        component_image: "/components-images/component-preview-a.png",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 4,
-        component_name: "Terminal",
-        about_component: "A customizable terminal component for interactive command-line interfaces",
-        component_image: "https://assets.aceternity.com/compare.webp",
+        component_name: "AI Input-box Block",
+        about_component: "A clean AI chat input with auto-resize and send button, ready for any AI interface",
+        component_image: "/components-images/ai-inputs.webp",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 5,
-        component_name: "3D Card Effect",
-        about_component: "A set of 3D card effect components for engaging user interfaces",
-        component_image: "https://assets.aceternity.com/cloudinary_bkp/3d-card.webp",
+        component_name: "AI Input-box Block 2",
+        about_component: "An alternate AI input variant with extra actions like attachments and voice input",
+        component_image: "/components-images/ai-inputs-2.webp",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 6,
-        component_name: "Feature Sections",
-        about_component: "A collection of feature section components for showcasing product features",
-        component_image: "https://assets.aceternity.com/components/features-section-with-skeletons.webp",
+        component_name: "Command Picker",
+        about_component: "A keyboard-driven command palette for quickly searching and triggering actions",
+        component_image: "/components-images/command-picker.png",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 7,
-        component_name: "Testimonials",
-        about_component: "A set of testimonial components for displaying customer feedback",
-        component_image: "https://assets.aceternity.com/world-map.webp",
+        component_name: "Model Selector",
+        about_component: "A dropdown for switching between AI models with icons and smooth tilt animations",
+        component_image: "/components-images/model-picker.png",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 8,
-        component_name: "3D World Globe",
-        about_component: "A customizable 3D world globe component for interactive maps and data visualization",
-        component_image: "https://assets.aceternity.com/components/3d-globe.webp",
+        component_name: "Model Picker Search",
+        about_component: "A searchable model picker for filtering and selecting from a long list of AI models",
+        component_image: "/components-images/models-search-component.webp",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 9,
-        component_name: "Animated Backgrounds",
-        about_component: "A collection of animated background components for dynamic web design",
-        component_image: "https://assets.aceternity.com/background-ripple-effect.webp",
+        component_name: "Signup & Signin Form",
+        about_component: "A combined auth form with toggleable signup and signin states in one component",
+        component_image: "/components-images/signup-signin.webp",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 10,
-        component_name: "Custom Scrollbars",
-        about_component: "A set of customizable scrollbar components for enhanced user experience",
-        component_image: "https://assets.aceternity.com/draggable-card.webp",
-        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-
-    },
-    {
-        id: 11,
-        component_name: "Interactive Maps",
-        about_component: "A collection of interactive map components for geospatial data visualization",
-        component_image: "https://assets.aceternity.com/pro/testimonials.png",
+        component_name: "Login Form",
+        about_component: "A minimal login form component with email/password fields and validation states",
+        component_image: "/components-images/login-page.webp",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
     },
     {
         id: 12,
-        component_name: "Loading Spinners",
-        about_component: "A set of customizable loading spinner components for indicating progress",
-        component_image: "https://assets.aceternity.com/components/scales.webp",
+        component_name: "AI Inputs Composer",
+        about_component: "A full-featured composer for AI chats with toolbar actions and multiline support",
+        component_image: "/components-images/composer.png",
         component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
-    }
-   
+    },
+    {
+        id: 13,
+        component_name: "AI Markdown selector",
+        about_component: "A markdown-aware selector component for picking and rendering formatted AI responses",
+        component_image: "/components-images/markdowns.png",
+        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
+    },
+        {
+        id: 14,
+        component_name: "AI Pricing Models",
+        about_component: "Pricing cards for AI models with features, pricing tiers, and call-to-action buttons",
+        component_image: "/components-images/pricing.webp",
+        component_docs_link: "https://lokalhost-io-i2di.vercel.app/docs",
+    },
 ]
 function Page() {
 
@@ -127,19 +132,13 @@ function Page() {
       <div className='w-full h-auto pt-6 pb-10 grid grid-cols-1 lg:grid-cols-3 justify-center gap-10 px-5 w-full mx-auto'>
         
         {components.map((item) => (
-            <div key={item.id} className='mx-auto cursor-pointer relative lg:w-[380px] h-[420px] w-full rounded-xl border overflow-hidden border
+            <div key={item.id} className='mx-auto cursor-pointer relative lg:w-[380px] h-[370px] w-full rounded-xl border overflow-hidden border
     transition-all duration-300 ease-in-out
     hover:scale-[1.03]
     hover:shadow-sm
     hover:bg-neutral-200 hover:dark:bg-neutral-900'>
-                <NoiseTexture
-                        className={cn(
-                        "dark:hidden absolute inset-0 z-10",
-                        "mask-[radial-gradient(420px_circle_at_center,white,transparent)]"
-                        )}
-                    />
                 {/* Top 60% — Image */}
-                <div className="h-[60%] w-full border-b z-40">
+                <div className="h-[60%] w-full border-b z-40 w-full">
                 <img
                     src={item.component_image}
                     alt={item.component_name}

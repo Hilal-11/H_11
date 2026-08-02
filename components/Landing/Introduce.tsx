@@ -129,14 +129,8 @@ function Introduce() {
         </div>
       <div className='h-auto'>
         <GithubContributions />
-                      <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
-                        <StripedPattern/>
-                      </div>
       </div>
       {/* Repos */}
-      <div className="relative pt-10 pb-10 px-5 w-full h-[auto border-t border-b border-neutral-300 dark:border-neutral-800">
-        <GithubRepos />
-      </div>
       <div className="w-full h-[40px] relative border-t border-b border-neutral-300 dark:border-neutral-800">
         <StripedPattern/>
       </div>
@@ -323,81 +317,6 @@ function RepoCard({ repo }: { repo: Repo }) {
     </Link>
   )
 }
-
-// ─── Main Section ─────────────────────────────────────────────────────────────
-export function GithubRepos() {
-  const repos: Repo[] = GITHHUB_REPOSITORIES
-
-  return (
-    <div className="relative w-full border-neutral-200 dark:border-neutral-800">
-
-      {/* ── Section header ── */}
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-          <h2 className="font-mono text-sm font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-            Open Source
-          </h2>
-          <p className="mt-0.5 font-mono text-[11px] text-neutral-400 dark:text-neutral-500">
-            {repos.length} public repositor{repos.length === 1 ? 'y' : 'ies'}
-          </p>
-        </div>
-        <Link
-          href="https://github.com/hilal-11"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex items-center gap-1.5 rounded-lg border px-3 py-1.5
-            font-mono text-xs font-semibold
-            border-neutral-200 bg-white text-neutral-700
-            hover:border-neutral-300 hover:text-neutral-900
-            dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-300
-            dark:hover:border-neutral-600 dark:hover:text-neutral-100
-            transition-colors duration-150
-          "
-        >
-          <IconGitHub />
-          View all
-          <IconExternal />
-        </Link>
-      </div>
-
-      {/* ── Grid ── */}
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {repos.map(repo => (
-          <RepoCard key={repo.id} repo={repo} />
-        ))}
-      </div>
-
-      {/* ── CTA footer ── */}
-      <div className="mt-8 flex justify-center">
-        <Link
-          href="https://github.com/hilal-11"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            group flex items-center gap-2 rounded-xl border
-            border-neutral-200 dark:border-neutral-700
-            bg-neutral-50 dark:bg-neutral-900
-            px-6 py-2.5 font-mono text-xs font-semibold
-            text-neutral-600 dark:text-neutral-300
-            hover:border-neutral-400 dark:hover:border-neutral-500
-            hover:text-neutral-900 dark:hover:text-neutral-100
-            hover:bg-white dark:hover:bg-neutral-800
-            transition-all duration-150
-          "
-        >
-          <IconGitHub />
-          See everything on GitHub
-          <span className="transition-transform duration-150 group-hover:translate-x-0.5">
-            <IconExternal />
-          </span>
-        </Link>
-      </div>
-
-    </div>
-  )
-}
-
 function HighlightAt({ text }: { text: string }) {
   const parts = text.split(/(@\S+)/g);
 
@@ -407,14 +326,14 @@ function HighlightAt({ text }: { text: string }) {
         part.startsWith("@") ? (
           <span key={i} className="relative inline-flex items-center group/tag">
             {/* Glow behind */}
-            <span className="absolute inset-0 rounded-sm bg-gradient-to-r from-red-500/20 via-orange-400/20 to-amber-400/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="absolute inset-0 rounded-sm bg-gradient-to-r from-neutral-400/20 via-neutral-500/20 to-neutral-700/20 dark:from-neutral-500/20 dark:via-neutral-300/20 dark:to-neutral-100/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Gradient text */}
             <span
-              className="relative font-bold bg-gradient-to-r from-red-500 via-orange-400 to-amber-400 bg-clip-text text-transparent
+              className="relative font-bold bg-gradient-to-r from-neutral-500 via-neutral-700 to-neutral-900 dark:from-neutral-400 dark:via-neutral-200 dark:to-neutral-50 bg-clip-text text-transparent
                 bg-[length:200%_auto] animate-gradient-x
                 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full
-                after:bg-gradient-to-r after:from-red-500 after:via-orange-400 after:to-amber-400
+                after:bg-gradient-to-r after:from-neutral-500 after:via-neutral-700 after:to-neutral-900 dark:after:from-neutral-400 dark:after:via-neutral-200 dark:after:to-neutral-50
                 after:rounded-full after:opacity-60"
             >
               {part}

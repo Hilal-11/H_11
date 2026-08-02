@@ -187,10 +187,6 @@ function ComponentsCLIInstallation() {
                     Add via command line
                   </p>
                 </div>
-                <span className='shrink-0 inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-500'>
-                  <span className='w-1.5 h-1.5 rounded-full bg-red-500' />
-                  Beta
-                </span>
               </div>
 
               {/* Right — full width on mobile, 70% on sm+ */}

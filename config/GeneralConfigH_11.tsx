@@ -12,6 +12,7 @@ import { IoMdContact } from "react-icons/io";
 import { SiBuiltbybit } from "react-icons/si";
 import { CgGenderMale } from "react-icons/cg";
 import { MdLanguage, MdOutlineMailOutline, MdPublic, MdStars, MdWorkOutline } from "react-icons/md";
+import { SiLeetcode } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import { PiTerminalDuotone } from "react-icons/pi";
 
@@ -46,8 +47,8 @@ export const HEADER:IHeader[] = [
     },
     {
         id: 5,
-        navItem: "Designs",
-        navLink: "/designs",
+        navItem: "Work-Projects",
+        navLink: "/projects",
     },
     {
         id: 8,
@@ -78,7 +79,7 @@ export const SOCIAL_LINKS:ISocialLinks[] = [
     },
         {
         id: 2, 
-        Icon: FaInstagram,
+        Icon: SiLeetcode,
         social_name: 'Leetcode',
         social_link: 'https://leetcode.com/u/hilal-11/'
     },
@@ -98,7 +99,7 @@ export const SOCIAL_LINKS:ISocialLinks[] = [
         id: 5, 
         Icon: FaInstagram,
         social_name: 'Instagram',
-        social_link: 'https://www.instagram.com/local_host_404/'
+        social_link: 'https://www.instagram.com/hilal_11_n/'
     },
 
 
@@ -7722,42 +7723,111 @@ export const GITHHUB_REPOSITORIES = [
 
 // tech stack
 
-export const TECH_STACK = [
-    { id: "1", tech_image: "/tech/js.jpeg" , tech_name: "Typescript"},
-    { id: "2", tech_image: "/tech/ts.jpeg" , tech_name: "Javascript"},
-    { id: "3", tech_image: "/tech/cpp.png" , tech_name: "C++"},
-    { id: "4", tech_image: "/tech/py.png" , tech_name: "Python"},
-    { id: "5", tech_image: "/tech/node.jpeg" , tech_name: "Node.Js"},
-    { id: "6", tech_image: "/tech/react.jpeg" , tech_name: "React.Js"},
-    { id: "7", tech_image: "/tech/next.jpeg" , tech_name: "Next.Js"},
-    { id: "8", tech_image: "/tech/tailwind.webp" , tech_name: "Tailwind.css"},
-    { id: "9", tech_image: "/tech/motion.jpeg" , tech_name: "Motion"},
-    { id: "10", tech_image: "/tech/shad.jpeg", tech_name: "Shadcn-ui"},
-    { id: "11", tech_image: "/tech/redux.svg" , tech_name: "Redux toolkit"},
-    { id: "12", tech_image: "/tech/docker.png" , tech_name: "Docker"},
-    { id: "13", tech_image: "/tech/k8s.png" , tech_name: "Kubernets"},
-    { id: "14", tech_image: "/tech/linux.webp" , tech_name: "Linux"},
-    { id: "15", tech_image: "/tech/webrtc.png" , tech_name: "WebRTC"},
-    { id: "16", tech_image: "/tech/socket.png" , tech_name: "Socket.io"},
-    { id: "17", tech_image: "/tech/redis.png" , tech_name: "Radis"},
-    { id: "18", tech_image: "/tech/aws.jpeg" , tech_name: "AWS"},
-    { id: "19", tech_image: "/tech/github.png" , tech_name: "Github/Git"},
-    { id: "20", tech_image: "/tech/express.png" , tech_name: "Express.js"},
-    { id: "21", tech_image: "/tech/auth.jpeg" , tech_name: "Auth0 and Oauth2"},
-    { id: "22", tech_image: "/tech/three.png" , tech_name: "Three.js"},
-    { id: "23", tech_image: "/tech/firebase.jpg" , tech_name: "Firebase"},
-    { id: "24", tech_image: "/tech/react.jpeg" , tech_name: "React Native"},
-    { id: "25", tech_image: "/tech/expo.png" , tech_name: "Expo"},
-    { id: "33", tech_image: "/tech/flutter.jpeg" , tech_name: "Flutter"},
-    { id: "26", tech_image: "/tech/convex.jpeg" , tech_name: "Convex DB"},
-    { id: "27", tech_image: "/tech/postgress.png" , tech_name: "Postgress"},
-    { id: "28", tech_image: "/tech/mongo.png" , tech_name: "MongoDB"},
-    { id: "29", tech_image: "/tech/kafka.png" , tech_name: "Kafka"},
-    { id: "30", tech_image: "/tech/dsa.jpg" , tech_name: "Data Structures Algorithms"},
-    { id: "31", tech_image: "/tech/genai.jpg" , tech_name: "GenAI"},
-    { id: "32", tech_image: "/tech/numpy.png" , tech_name: "Numpy | Pandas | Plotly | Chart.js"},
-    { id: "34", tech_image: "/tech/devops.svg" , tech_name: "Devops"},
-    { id: "35", tech_image: "/tech/figma.jpeg" , tech_name: "Figma"}
+// config/GeneralConfigH_11.ts
+// config/GeneralConfigH_11.ts
+import {
+  SiTypescript, SiJavascript, SiPython, SiCplusplus, SiRust, SiGo, SiHtml5,
+  SiFigma, SiAdobephotoshop,
+  SiReact, SiNextdotjs, SiTailwindcss, SiShadcnui, SiFramer, SiRedux,
+  SiThreedotjs, SiRadixui, SiReactquery, SiVite,
+  SiExpo, SiFlutter, SiDart,
+  SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiRedis, SiApachekafka,
+  SiSocketdotio, SiWebrtc, SiAuth0, SiFirebase, SiSupabase, SiPrisma,
+  SiGraphql, SiStripe,
+  SiDocker, SiKubernetes, SiLinux, SiAmazon, SiGithub, SiVercel,
+  SiGithubactions, SiNginx,
+  SiNumpy, SiOpenai, SiJupyter, SiPowers,
+} from "react-icons/si";
+import {
+  TbDatabase, TbCube, TbShieldCheck, TbBox, TbWind, TbBolt, TbDroplet,
+  TbUserShield, TbKey, TbInfinity, TbBinaryTree, TbSparkles, TbRobot, TbLink,
+} from "react-icons/tb";
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+
+export interface TechItem {
+  id: string;
+  icon: IconType;
+  tech_name: string;
+  category: string;
+}
+
+export const TECH_STACK: TechItem[] = [
+  // Languages
+  { id: "1", icon: SiTypescript, tech_name: "TypeScript", category: "languages" },
+  { id: "2", icon: SiJavascript, tech_name: "JavaScript", category: "languages" },
+  { id: "3", icon: SiPython, tech_name: "Python", category: "languages" },
+  { id: "4", icon: SiCplusplus, tech_name: "C++", category: "languages" },
+  { id: "36", icon: SiRust, tech_name: "Rust", category: "languages" },
+  { id: "37", icon: SiGo, tech_name: "Go", category: "languages" },
+  { id: "38", icon: TbDatabase, tech_name: "SQL", category: "languages" },
+  { id: "39", icon: SiHtml5, tech_name: "HTML / CSS", category: "languages" },
+
+  // Design
+  { id: "35", icon: SiFigma, tech_name: "Figma", category: "design" },
+  { id: "40", icon: SiAdobephotoshop, tech_name: "Photoshop", category: "design" },
+  { id: "41", icon: TbCube, tech_name: "Spline", category: "design" },
+
+  // Frontend
+  { id: "6", icon: SiReact, tech_name: "React.js", category: "frontend" },
+  { id: "7", icon: SiNextdotjs, tech_name: "Next.js", category: "frontend" },
+  { id: "8", icon: SiTailwindcss, tech_name: "Tailwind CSS", category: "frontend" },
+  { id: "10", icon: SiShadcnui, tech_name: "shadcn/ui", category: "frontend" },
+  { id: "9", icon: SiFramer, tech_name: "Motion", category: "frontend" },
+  { id: "11", icon: SiRedux, tech_name: "Redux Toolkit", category: "frontend" },
+  { id: "22", icon: SiThreedotjs, tech_name: "Three.js", category: "frontend" },
+  { id: "42", icon: SiRadixui, tech_name: "Radix UI", category: "frontend" },
+  { id: "43", icon: TbShieldCheck, tech_name: "Zod", category: "frontend" },
+  { id: "44", icon: TbBox, tech_name: "Zustand", category: "frontend" },
+  { id: "45", icon: SiReactquery, tech_name: "TanStack Query", category: "frontend" },
+  { id: "46", icon: SiVite, tech_name: "Vite", category: "frontend" },
+
+  // Mobile
+  { id: "24", icon: SiReact, tech_name: "React Native", category: "mobile" },
+  { id: "25", icon: SiExpo, tech_name: "Expo", category: "mobile" },
+  { id: "33", icon: SiFlutter, tech_name: "Flutter", category: "mobile" },
+  { id: "47", icon: TbWind, tech_name: "NativeWind", category: "mobile" },
+  { id: "48", icon: SiDart, tech_name: "Dart", category: "mobile" },
+
+  // Backend & DB
+  { id: "5", icon: SiNodedotjs, tech_name: "Node.js", category: "backend" },
+  { id: "20", icon: SiExpress, tech_name: "Express.js", category: "backend" },
+  { id: "26", icon: TbBolt, tech_name: "Convex DB", category: "backend" },
+  { id: "27", icon: SiPostgresql, tech_name: "PostgreSQL", category: "backend" },
+  { id: "28", icon: SiMongodb, tech_name: "MongoDB", category: "backend" },
+  { id: "17", icon: SiRedis, tech_name: "Redis", category: "backend" },
+  { id: "29", icon: SiApachekafka, tech_name: "Kafka", category: "backend" },
+  { id: "16", icon: SiSocketdotio, tech_name: "Socket.io", category: "backend" },
+  { id: "15", icon: SiWebrtc, tech_name: "WebRTC", category: "backend" },
+  { id: "21", icon: SiAuth0, tech_name: "Auth0 & OAuth2", category: "backend" },
+  { id: "23", icon: SiFirebase, tech_name: "Firebase", category: "backend" },
+  { id: "49", icon: SiSupabase, tech_name: "Supabase", category: "backend" },
+  { id: "50", icon: SiPrisma, tech_name: "Prisma", category: "backend" },
+  { id: "51", icon: TbDroplet, tech_name: "Drizzle ORM", category: "backend" },
+  { id: "52", icon: SiGraphql, tech_name: "GraphQL", category: "backend" },
+  { id: "53", icon: SiStripe, tech_name: "Stripe", category: "backend" },
+  { id: "54", icon: TbUserShield, tech_name: "Clerk", category: "backend" },
+  { id: "55", icon: TbKey, tech_name: "JWT", category: "backend" },
+
+  // DevOps & Cloud
+  { id: "12", icon: SiDocker, tech_name: "Docker", category: "devops" },
+  { id: "13", icon: SiKubernetes, tech_name: "Kubernetes", category: "devops" },
+  { id: "14", icon: SiLinux, tech_name: "Linux", category: "devops" },
+  { id: "18", icon: SiAmazon, tech_name: "AWS", category: "devops" },
+  { id: "19", icon: SiGithub, tech_name: "GitHub / Git", category: "devops" },
+  { id: "34", icon: TbInfinity, tech_name: "DevOps", category: "devops" },
+  { id: "56", icon: SiVercel, tech_name: "Vercel", category: "devops" },
+  { id: "57", icon: SiGithubactions, tech_name: "GitHub Actions", category: "devops" },
+  { id: "58", icon: SiNginx, tech_name: "Nginx", category: "devops" },
+
+  // Data, AI & DSA
+  { id: "30", icon: TbBinaryTree, tech_name: "Data Structures & Algorithms", category: "data" },
+  { id: "31", icon: TbSparkles, tech_name: "GenAI", category: "data" },
+  { id: "32", icon: SiNumpy, tech_name: "NumPy · Pandas · Plotly · Chart.js", category: "data" },
+  { id: "59", icon: TbRobot, tech_name: "Anthropic Claude API", category: "data" },
+  { id: "60", icon: SiOpenai, tech_name: "OpenAI API", category: "data" },
+  { id: "61", icon: TbLink, tech_name: "LangChain", category: "data" },
+  { id: "62", icon: SiJupyter, tech_name: "Jupyter Notebook", category: "data" },
+  { id: "63", icon: PiMicrosoftExcelLogoFill, tech_name: "Power BI / Excel", category: "data" },
 ];
 
 // Experiance data config

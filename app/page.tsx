@@ -20,33 +20,17 @@ export default function Home() {
             <div className="mt-14 relative">
               <Introduce/>
             </div>
-              <div className="py-4">
-                <Reviews />
-              </div>
-              <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
-                <StripedPattern/>
-              </div>
               <div className="relative">
                 <ProjectsSection />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
               </div>
+              <div className="py-4">
+                <Reviews />
+              </div>
               <div className="mt-20">
                 <Skills />
-              </div>
-
-              <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
-                <StripedPattern/>
-              </div>
-              <div className="relative">
-                <Experience />
-              </div>
-              <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
-                <StripedPattern/>
-              </div>
-              <div className="relative">
-                <Certificates />
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
@@ -65,6 +49,15 @@ export default function Home() {
               </div>
               <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
                 <StripedPattern/>
+              </div>
+              <div className="relative">
+                <Experience />
+              </div>
+              <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
+                <StripedPattern/>
+              </div>
+              <div className="relative">
+                <Certificates />
               </div>
                <div>
                 <FAQ />

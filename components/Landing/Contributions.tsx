@@ -2,6 +2,13 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import { CONTRIBUTIONS_GITHUB } from '../../config/GeneralConfigH_11'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Contribution = { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 }
@@ -9,12 +16,11 @@ type TooltipState  = { visible: boolean; x: number; y: number; contribution: Con
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const MONTH_LABELS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-const BLOCK = 12   // px – cell size
-const GAP   = 3    // px – gap between cells
-const GITHUB_URL = 'https://github.com/Hilal-11' // ← replace with your username
+const BLOCK = 12
+const GAP   = 3
+const GITHUB_URL = 'https://github.com/Hilal-11'
 const GITHUB_USERNAME = 'Hilal-11'
 
-// ─── Level → Tailwind colour map (light / dark) ───────────────────────────────
 const LEVEL_COLORS: Record<number, string> = {
   0: 'bg-neutral-100   dark:bg-neutral-800/70',
   1: 'bg-emerald-200   dark:bg-emerald-950',
@@ -75,19 +81,13 @@ function Tooltip({ state }: { state: TooltipState }) {
 }
 
 // ─── Stat Card ────────────────────────────────────────────────────────────────
-function StatCard({ label, value, accent = false }: { label: string; value: string | number; accent?: boolean }) {
+function StatCard({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className={cn(
-      'flex flex-col gap-1 rounded-xl border px-4 py-3 transition-colors',
-      'border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900/50',
-    )}>
-      <span className={cn(
-        'font-sans text-xl font-bold leading-none tracking-tight',
-        accent ? 'text-neutral-600 dark:text-neutral-400' : 'text-neutral-900 dark:text-neutral-100',
-      )}>
+    <div className='flex flex-col gap-0.5 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 px-3.5 py-2.5'>
+      <span className='font-sans text-lg font-bold leading-none tracking-tight text-neutral-900 dark:text-neutral-100'>
         {value}
       </span>
-      <span className="font-sans text-[11px] font-medium tracking-widest text-neutral-400 dark:text-neutral-500">
+      <span className='font-sans text-[10px] font-medium tracking-wide text-neutral-400 dark:text-neutral-500'>
         {label}
       </span>
     </div>
@@ -121,7 +121,6 @@ export function GithubContributions() {
   const wrapRef = useRef<HTMLDivElement>(null)
   const username = 'Hilal-11'
 
-  // ✅ Fetch data from API on mount and year change
   useEffect(() => {
     async function fetchContributions() {
       setLoading(true)
@@ -136,7 +135,6 @@ export function GithubContributions() {
 
         const data = await response.json()
 
-        // Check if we got valid data
         if (data.contributions && Array.isArray(data.contributions) && data.contributions.length > 0) {
           setAllContributions(data.contributions)
         } else {
@@ -145,7 +143,6 @@ export function GithubContributions() {
 
       } catch (error) {
         console.error('Failed to fetch GitHub contributions:', error)
-        // Use fallback data from config
         setAllContributions(CONTRIBUTIONS_GITHUB.contributions as Contribution[])
         setUsingFallback(true)
       } finally {
@@ -187,7 +184,7 @@ export function GithubContributions() {
     <section className="w-full p-6 font-mono">
 
       {/* ── Header ── */}
-      <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
             Contribution Activity
@@ -195,143 +192,106 @@ export function GithubContributions() {
           <p className="mt-0.5 text-xs text-neutral-400 dark:text-neutral-500">
             {stats.total.toLocaleString()} contributions · {year}
             {usingFallback && (
-              <span className="ml-2 text-orange-500 dark:text-orange-400">(cached)</span>
+              <span className="ml-2 text-neutral-400 dark:text-neutral-600">(cached)</span>
             )}
           </p>
         </div>
 
-        {/* Right side: GitHub link + Year dropdown */}
         <div className="flex items-center gap-2">
 
-          {/* GitHub link */}
-          
-           <a href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              'flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold',
-              'border-neutral-200 bg-white text-neutral-700 transition-colors',
-              'hover:border-neutral-300 hover:text-neutral-900',
-              'dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300',
-              'dark:hover:border-neutral-600 dark:hover:text-neutral-100',
-            )}
-          >
-            <GitHubIcon className="h-3.5 w-3.5" />
-            <span>GitHub</span>
-            <svg viewBox="0 0 12 12" fill="none" className="h-2.5 w-2.5 opacity-50" stroke="currentColor" strokeWidth="1.5">
-              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H5M9.5 2.5V7" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-
-          {/* Year dropdown */}
-          <div className="relative">
-            <select
-              value={year}
-              onChange={e => setYear(e.target.value)}
-              disabled={loading}
+          {/* Year select — shadcn */}
+          <Select value={year} onValueChange={setYear} disabled={loading}>
+            <SelectTrigger
               className={cn(
-                'h-8 appearance-none rounded-lg border pl-3 pr-7 text-xs font-semibold cursor-pointer',
-                'border-neutral-200 bg-white text-neutral-700 outline-none transition-colors',
-                'hover:border-neutral-300 focus:border-neutral-400',
-                'dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200',
-                'dark:hover:border-neutral-600 dark:focus:border-neutral-500',
-                'disabled:opacity-50 disabled:cursor-not-allowed',
+                'h-6 w-[92px] rounded-lg text-xs font-semibold',
+                'border-neutral-200 bg-white text-neutral-700',
+                'dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200',
               )}
             >
+              <SelectValue placeholder="Year" />
+            </SelectTrigger>
+            <SelectContent>
               {years.map(y => (
-                <option key={y} value={y}>{y}</option>
+                <SelectItem key={y} value={y} className="text-xs font-semibold">
+                  {y}
+                </SelectItem>
               ))}
-            </select>
-            {/* Custom chevron */}
-            <svg
-              viewBox="0 0 12 12" fill="none" stroke="currentColor"
-              strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-              className="pointer-events-none absolute right-2 top-1/2 h-2.5 w-2.5 -translate-y-1/2 text-neutral-400"
-            >
-              <path d="M2 4l4 4 4-4" />
-            </svg>
-          </div>
-
+            </SelectContent>
+          </Select>
         </div>
       </div>
 
-      {/* ── Stats row ── */}
-      <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <StatCard label="Total"          value={loading ? '...' : stats.total.toLocaleString()} accent />
-        <StatCard label="Active Days"    value={loading ? '...' : stats.activeDays} />
-        <StatCard label="Longest Streak" value={loading ? '...' : `${stats.maxStreak}d`} />
-        <StatCard label="Current Streak" value={loading ? '...' : `${stats.curStreak}d`} />
-      </div>
+     
+      {/* ── Graph — centered ── */}
+      <div className="w-full flex justify-center">
+        <div ref={wrapRef} className="relative w-fit overflow-x-auto pb-1">
 
-      {/* ── Calendar ── */}
-      <div ref={wrapRef} className="relative w-full overflow-x-auto pb-1">
+          {loading && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-white dark:bg-neutral-950 backdrop-blur-sm rounded-lg">
+              <div className="animate-spin rounded-full h-8 w-8 border-2 border-neutral-300 border-t-neutral-800 dark:border-neutral-700 dark:border-t-neutral-400" />
+            </div>
+          )}
 
-        {/* Loading overlay */}
-        {loading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-white dark:bg-neutral-950 backdrop-blur-sm rounded-lg">
-            <div className="animate-spin rounded-full h-8 w-8 border-2 border-neutral-300 border-t-neutral-800 dark:border-neutral-700 dark:border-t-neutral-400" />
+          {/* Month labels */}
+          <div className="flex" style={{ paddingLeft: DAY_OFFSET }}>
+            {weeks.map((_, wi) => {
+              const lbl = monthLabels.find(m => m.col === wi)
+              return (
+                <div
+                  key={wi}
+                  className="shrink-0 text-[9px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500"
+                  style={{ width: BLOCK + GAP }}
+                >
+                  {lbl ? lbl.text : ''}
+                </div>
+              )
+            })}
           </div>
-        )}
 
-        {/* Month labels */}
-        <div className="flex" style={{ paddingLeft: DAY_OFFSET }}>
-          {weeks.map((_, wi) => {
-            const lbl = monthLabels.find(m => m.col === wi)
-            return (
-              <div
-                key={wi}
-                className="shrink-0 text-[9px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500"
-                style={{ width: BLOCK + GAP }}
-              >
-                {lbl ? lbl.text : ''}
-              </div>
-            )
-          })}
+          <div className="flex items-start" style={{ gap: 0 }}>
+
+            {/* Day-of-week labels */}
+            <div className="flex shrink-0 flex-col" style={{ width: DAY_OFFSET, paddingTop: 2 }}>
+              {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d, i) => (
+                <div
+                  key={d}
+                  className="text-[9px] font-medium text-neutral-300 dark:text-neutral-600"
+                  style={{ height: BLOCK, marginBottom: GAP, lineHeight: `${BLOCK}px` }}
+                >
+                  {i % 2 === 1 ? d : ''}
+                </div>
+              ))}
+            </div>
+
+            {/* Grid */}
+            <div className="flex" style={{ gap: GAP }}>
+              {weeks.map((week, wi) => (
+                <div key={wi} className="flex flex-col" style={{ gap: GAP }}>
+                  {week.map((day, di) => (
+                    <div
+                      key={di}
+                      style={{ width: BLOCK, height: BLOCK, borderRadius: 3 }}
+                      className={cn(
+                        'shrink-0 transition-all duration-100',
+                        day
+                          ? cn(LEVEL_COLORS[day.level], day.count > 0 && 'cursor-pointer hover:ring-2 hover:ring-emerald-400/60 hover:ring-offset-1 dark:hover:ring-emerald-400/40')
+                          : 'bg-transparent',
+                      )}
+                      onMouseEnter={day ? e => onEnter(e, day) : undefined}
+                      onMouseLeave={day ? onLeave : undefined}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <Tooltip state={tooltip} />
         </div>
-
-        <div className="flex items-start" style={{ gap: 0 }}>
-
-          {/* Day-of-week labels */}
-          <div className="flex shrink-0 flex-col" style={{ width: DAY_OFFSET, paddingTop: 2 }}>
-            {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d, i) => (
-              <div
-                key={d}
-                className="text-[9px] font-medium text-neutral-300 dark:text-neutral-600"
-                style={{ height: BLOCK, marginBottom: GAP, lineHeight: `${BLOCK}px` }}
-              >
-                {i % 2 === 1 ? d : ''}
-              </div>
-            ))}
-          </div>
-
-          {/* Grid */}
-          <div className="flex" style={{ gap: GAP }}>
-            {weeks.map((week, wi) => (
-              <div key={wi} className="flex flex-col" style={{ gap: GAP }}>
-                {week.map((day, di) => (
-                  <div
-                    key={di}
-                    style={{ width: BLOCK, height: BLOCK, borderRadius: 3 }}
-                    className={cn(
-                      'shrink-0 transition-all duration-100',
-                      day
-                        ? cn(LEVEL_COLORS[day.level], day.count > 0 && 'cursor-pointer hover:ring-2 hover:ring-emerald-400/60 hover:ring-offset-1 dark:hover:ring-emerald-400/40')
-                        : 'bg-transparent',
-                    )}
-                    onMouseEnter={day ? e => onEnter(e, day) : undefined}
-                    onMouseLeave={day ? onLeave : undefined}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <Tooltip state={tooltip} />
       </div>
 
       {/* ── Legend ── */}
-      <div className="mt-4 flex items-center justify-end gap-1.5">
+      <div className="mt-4 flex items-center justify-center gap-1.5">
         <span className="text-[10px] text-neutral-400">Less</span>
         {[0, 1, 2, 3, 4].map(l => (
           <div key={l} style={{ width: 10, height: 10, borderRadius: 2 }} className={LEVEL_COLORS[l]} />

@@ -9,15 +9,45 @@ import { useTheme } from 'next-themes';
 import { TooltipProvider,Tooltip , TooltipContent , TooltipTrigger } from '@radix-ui/react-tooltip';
 import { SOCIAL_LINKS } from '@/config/GeneralConfigH_11';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoMdClose } from "react-icons/io";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { HEADER } from '@/config/GeneralConfigH_11';
 import { cn } from '@/lib/utils';
+
 function Header() {
     const router = useRouter()
+    const pathname = usePathname()
     const { theme, setTheme } = useTheme();
     const [isMobileMenu , setIsMobileMenu] = useState(false)
+    const menuRef = useRef<HTMLDivElement>(null)
+    const toggleBtnRef = useRef<HTMLButtonElement>(null)
+
+    // Close on click outside the menu (and not on the toggle button itself)
+    useEffect(() => {
+        if (!isMobileMenu) return;
+
+        function handleClickOutside(event: MouseEvent) {
+            const target = event.target as Node;
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(target) &&
+                toggleBtnRef.current &&
+                !toggleBtnRef.current.contains(target)
+            ) {
+                setIsMobileMenu(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isMobileMenu]);
+
+    // Close automatically whenever the route changes
+    useEffect(() => {
+        setIsMobileMenu(false);
+    }, [pathname]);
+
   return (
     <div id="top" className='z-50 backdrop-blur-sm fixed top-1 left-0 right-0 flex items-center justify-between w-full h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-2 lg:px-10'>
         <div className='md:container lg:w-8xl flex items-center w-full justify-between h-[56px] border-t border-b border-neutral-300 dark:border-neutral-800 px-3 lg:px-10 mx-auto border-l border-r relative'>
@@ -54,16 +84,16 @@ function Header() {
                         </TooltipProvider>
                         </ButtonGroup>
 
-                    <button onClick={() => setIsMobileMenu(!isMobileMenu)} className='border rounded-lg px-[6px] py-[5px] flex md:hidden lg:hidden justify-center items-center bg-neutral-50 dark:bg-neutral-900'>
+                    <button ref={toggleBtnRef} onClick={() => setIsMobileMenu(!isMobileMenu)} className='border rounded-lg px-[6px] py-[5px] flex md:hidden lg:hidden justify-center items-center bg-neutral-50 dark:bg-neutral-900'>
                         { isMobileMenu ? <span className='text-xl'><IoMdClose /></span> : <span className='text-xl'><CgMenuRight/></span>}
                     </button>
 
                 </div>
                 {
                     isMobileMenu && 
-                    <div className='z-50 md:hidden lg:hidden w-[230px] h-auto bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
+                    <div ref={menuRef} className='z-50 md:hidden lg:hidden w-[230px] h-auto bg-neutral-200 dark:bg-neutral-900 shadow-sm rounded-sm absolute right-0 top-10 pt-2'>
                         <div className='w-full h-auto flex flex-col space-y-2 px-3 py-3 pb-3'> 
-                            
+                            <Link href="/projects" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Projects</Link>
                             <Link href="/custom-work" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Custom Work</Link>
                             <Link href="/components" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Components</Link>
                             <Link href="/templates" className='pl-2 w-full block lg:hidden bg-neutral-100 dark:bg-neutral-800 py-2 rounded-sm font-mono font-medium text-sm text-neutral-800 dark:text-neutral-200'>Templates</Link>
