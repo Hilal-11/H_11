@@ -54,6 +54,7 @@ export const footerConfig: FooterConfigTypes[] = [
         id: "insp",
         service_title: "Design Inspiration",
         services: [
+           { service: "@lokalhost.io", navigateTo: "https://lokalhost-io-eta.vercel.app/" },
            { service: "@shadncUI", navigateTo: "https://ui.shadcn.com/" },
             { service: "@shadcn stdio", navigateTo: "https://shadcnstudio.com/" },
             { service: "@aceternity ui", navigateTo: "https://ui.aceternity.com/" },
@@ -67,42 +68,6 @@ export const footerConfig: FooterConfigTypes[] = [
 
 
 ]
-
-
-    // {
-    //     id: "web-components",
-    //     service_title: "Web Services",
-    //     services: [
-    //        { service: "Button", navigateTo: "/components/button" },
-    //         { service: "Card", navigateTo: "/components/card" },
-    //         { service: "Modal", navigateTo: "/components/modal" },
-    //         { service: "Tooltip", navigateTo: "/components/tooltip" },
-    //         { service: "Avatar", navigateTo: "/components/avatar" },
-    //         { service: "Input", navigateTo: "/components/input" },
-    //         { service: "Dropdown", navigateTo: "/components/dropdown" },
-    //         { service: "Toast", navigateTo: "/components/toast" },
-    //         { service: "Badge", navigateTo: "/components/badge" },
-    
-
-    //     ] 
-    // },
-
-    // {
-    //     id: "web-templates",
-    //     service_title: "Templates",
-    //     services: [
-    //        { service: "Landing", navigateTo: "/templates/landing" },
-    //         { service: "Dashboard", navigateTo: "/templates/dashboard" },
-    //         { service: "E-commerce", navigateTo: "/templates/ecommerce" },
-    //         { service: "Blog", navigateTo: "/templates/blog" },
-    //         { service: "Portfolio", navigateTo: "/templates/portfolio" },
-    //         { service: "SaaS", navigateTo: "/templates/saas" },
-    //         { service: "Admin Panel", navigateTo: "/templates/admin" },
-    //         { service: "Docs Site", navigateTo: "/templates/docs" },
-    //         { service: "Marketing Site", navigateTo: "/templates/marketing" },
-   
-    //     ] 
-    // },
 
 
 

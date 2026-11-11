@@ -59,7 +59,7 @@ function Header() {
             <div className='w-[70%] flex gap-4 items-center justify-end relative'>
             {
                 HEADER.map((item) => (
-                    <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-sans font-medium text-sm text-neutral-800 dark:text-neutral-200'>{item.navItem}</Link>
+                    <Link key={item.id} href={item.navLink} className='whitespace-nowrap hidden md:block lg:block font-sans font-medium text-sm text-neutral-800 dark:text-neutral-200 '>{item.navItem}</Link>
                 ))
             }
                 <div className='flex gap-1'>

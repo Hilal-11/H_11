@@ -122,8 +122,12 @@ export const INTRODUCE:IntroduceItem[] = [
     {
         option: "Founder and creator of @Lokalhost.io",
         Icon: PiTerminalDuotone,
-        link: "https://lokalhost-io-i2di.vercel.app/"
+        link: "https://lokalhost-io-eta.vercel.app/"
 
+    },
+    {
+        option: "Data Analyist *",
+        Icon: FaCode
     },
    
     {
@@ -179,6 +183,12 @@ export const ABOUT_MYSELF = {
 
         },
         {
+            tech_name: "Data Analyist",
+            about: "Data Analyst with experience transforming raw data into meaningful insights. Skilled in data analysis, visualization, and dashboard creation to support data-driven decisions and product improvements.",
+            build: [{name: "@numpy @pandas @plotly", link: "https://localhost.io"}, {name: "@projects", link: "https://localhost.io"}]
+
+        },
+        {
             tech_name: "Design Engineer",
             about: "Design Engineer known for pixel-perfect execution and strong attention to detail. Skilled in bridging design and code using Next.js, React, TypeScript, and design systems to build polished, intuitive web and mobile interfaces.",
             build: [{name: "@Lokalhost.io Designs", link: "https://localhost.io.com/designs"}]
@@ -198,14 +208,7 @@ export const ABOUT_MYSELF = {
             tech_name: "Mobile App Developer",
             about: "Mobile App Developer experienced in building cross-platform applications using React Native. Focused on creating smooth, responsive, and production-ready mobile experiences with shared logic and consistent UI across platforms.",
             build: [{name: "@lokalhost.io react-native apps", link: "https://localhost.io"} , {name: "@lokalhost.io apps templates" , link: "https://dystopian.com/"}, {name: "@react-native elements" , link: "https://github.com/Hilal-11/H_11"}]
-        },
-        {
-            tech_name: "Data Analyist",
-            about: "Data Analyst with experience transforming raw data into meaningful insights. Skilled in data analysis, visualization, and dashboard creation to support data-driven decisions and product improvements.",
-            build: [{name: "@numpy @pandas @plotly", link: "https://localhost.io"}, {name: "@projects", link: "https://localhost.io"}]
-
         }
-
     ]
 }
 

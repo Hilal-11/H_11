@@ -33,7 +33,7 @@ useEffect(() => {
                 <div className='px-5'><p className='font-sans font-medium text-sm'>Agents work inside your existing tools, with built-in approvals, brand and policy guardrails, and full traceability. Every action is auditable, every outcome accountable Enterprise-grade security that follows your users.</p>
                 
                 <div className='flex gap-2 pt-5'>
-                <Link href="https://lokalhost-io-i2di.vercel.app/" target="_blank"
+                <Link href="https://lokalhost-io-eta.vercel.app/" target="_blank"
                         className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-2 w-32 py-1 rounded-lg flex gap-1 items-center justify-between",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
@@ -44,7 +44,7 @@ useEffect(() => {
                                     "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
                                     "transition-all duration-200"
                                   )}><span className='text-lg'><MdOutlineTerminal /></span>Lokalhost.io</Link>
-              <Link href="https://lokalhost-io-i2di.vercel.app/docs" target="_blank"
+              <Link href="https://lokalhost-io-eta.vercel.app/docs" target="_blank"
                         className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-8 py-1 rounded-lg",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
@@ -84,7 +84,7 @@ useEffect(() => {
                     <h1 className="font-bold font-sans text-lg">Components for AI development</h1>
                     <p className='font-sans font-medium text-[13px]'>Send and receive messages in real time with voice and text.</p>
                     <div className='flex justify-end gap-3 w-full pt-3' >
-                        <Link href="https://lokalhost-io-i2di.vercel.app/docs" target="_blank"
+                        <Link href="https://lokalhost-io-eta.vercel.app/docs" target="_blank"
                         className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
@@ -95,7 +95,7 @@ useEffect(() => {
                                     "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
                                     "transition-all duration-200"
                                   )}>Components</Link>
-                        <Link href="https://lokalhost-io-i2di.vercel.app/docs" target="_blank" className={cn(
+                        <Link href="https://lokalhost-io-eta.vercel.app/docs" target="_blank" className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
                                     "bg-gradient-to-b from-neutral-700 to-neutral-900 dark:from-neutral-800 dark:to-neutral-950",
@@ -122,7 +122,7 @@ useEffect(() => {
                     <h1 className="font-bold font-sans text-lg">Templates and Landings for businesses</h1>
                     <p className='font-sans font-medium text-[13px]'>Share files securely with end-to-end encryption.</p>
                     <div className='flex justify-start gap-3 w-full pt-3' >
-                        <Link href="https://lokalhost-io-i2di.vercel.app/templates" target="_blank"
+                        <Link href="https://lokalhost-io-eta.vercel.app/templates" target="_blank"
                         className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",
@@ -187,7 +187,7 @@ useEffect(() => {
                                   built to accelerate your workflow and help you create seamless, visually 
                                   stunning, and scalable user experiences.</p>
                     <div className='flex justify-start gap-3 w-full pt-3' >
-                        <Link href="https://lokalhost-io-i2di.vercel.app/designs" target="_blank"
+                        <Link href="https://lokalhost-io-eta.vercel.app/designs" target="_blank"
                         className={cn(
                                     "cursor-pointer font-sans font-medium text-sm px-2 py-px rounded-lg",
                                     "border-t-[2px] border-l-[2px] border-r-[2px] border-neutral-950 dark:border-neutral-700",

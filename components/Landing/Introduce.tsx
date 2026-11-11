@@ -24,7 +24,7 @@ function Introduce() {
       Icon: MdStars,
       techRoles: ["Frontend Developer", "Design Engineer" ,"Backend Engineer", "Full Stack Developer","Mobile App Developer", "Data Analyist"]
     }
-  const Hilal = '/hilal.jpg'
+  const Hilal = '/hilal.png'
   return (
     <div id="top" className='relative w-full  border-b border-neutral-300 dark:border-neutral-800'>
       <div className='h-auto'>
@@ -36,8 +36,8 @@ function Introduce() {
           <div className='order-2 lg:order-none col-span-2 w-full py-4 lg:px-6 px-3'>
             <div className=''>
                <h1 className='font-sans text-4xl font-bold'>HILAL H_11</h1>
-               <p className='text-xs lg:text-[14px] font-medium font-sans pt-2 text-neutral-500 dark:text-neutral-400'>I’m a Software Engineer and Senior Frontend Developer with a strong focus on building scalable, production-ready web and mobile applications. I specialize in modern frontend technologies, design systems, and performance-driven UI engineering.</p>
-               <p className='pt-5 text-xs lg:text-[14px] font-medium font-sans font-light text-neutral-500 dark:text-neutral-400'>Currently, I’m open to freelance and remote opportunities where I can collaborate with teams to build meaningful, high-impact products.</p>
+               <p className='pr-5 lg:pr-40 text-xs lg:text-[14px] font-medium font-sans pt-2 text-neutral-500 dark:text-neutral-400'>I’m a Software Engineer and Senior Frontend Developer with a strong focus on building scalable, production-ready web and mobile applications. I specialize in modern frontend technologies, design systems, and performance-driven UI engineering.</p>
+               <p className='pr-5 lg:pr-40 pt-5 text-xs lg:text-[14px] font-medium font-sans font-light text-neutral-500 dark:text-neutral-400'>Currently, I’m open to freelance and remote opportunities where I can collaborate with teams to build meaningful, high-impact products.</p>
                <div className='mt-4'>
                 <ContainerTextFlip />
                </div>
@@ -117,7 +117,7 @@ function Introduce() {
           </div>
           <div className='h-full flex justify-center items-center w-full relative pr-2 pb-4 pt-2'>
               <div className='lg:w-full w-[320px] lg:h-auto h-[320px] p-5 rounded-full border border-dashed overflow-hidden relative'>
-                 <Image width={100} height={100} className='z-40 border border-neutral-300 dark:border-neutral-800 lg:w-full md:w-full w-[280px] relative rounded-full' src={Hilal} alt='OOps'/>
+                 <img width={100} height={100} className='z-40 border border-neutral-300 dark:border-neutral-800 lg:w-full md:w-full w-[280px] relative rounded-full' src={Hilal} alt='OOps'/>
                  <StripedPattern className='animate_orbit_ '/>
               </div>
           </div>

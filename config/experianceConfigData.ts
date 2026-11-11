@@ -260,7 +260,7 @@ export const CERTIFICATIONS = [
     certificate_name: "Bachlors of Computer Science",
     certificate_issuers: "@kashmir university",
     certicate_date_of_Issue: "2022 - 2025",
-    certicate_link: "",
+    certicate_link: "/degree.pdf",
     certicate_discription: "Bachlors in CS - deep knowledge of core computer science subjects and computer programming."
   },
   {
