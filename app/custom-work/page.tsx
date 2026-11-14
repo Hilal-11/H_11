@@ -115,7 +115,7 @@ function Page() {
 
 
   return (
-    <div className='md:container lg:w-8xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto'>
+    <div className='max-w-7xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto'>
       {/* Heading */}
       <div className='relative h-auto pt-18 mx-auto'>
        <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
@@ -435,7 +435,7 @@ function StatPill({ label, value }: { label: string; value: string }) {
 // ─── Main CTA ─────────────────────────────────────────────────────────────────
 function CustomWorkCTA() {
   return (
-    <div className="md:container lg:w-8xl w-full mx-auto py-20 px-4">
+    <div className="max-w-7xl w-full mx-auto py-20 px-4">
       <div
         className={cn(
             "relative overflow-hidden rounded-2xl",

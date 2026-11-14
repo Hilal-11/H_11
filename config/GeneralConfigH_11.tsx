@@ -36,6 +36,11 @@ interface IHeader {
 }
 export const HEADER:IHeader[] = [
     {
+      id: 1,
+      navItem: "Build",
+      navLink: "/products"
+    },
+    {
         id: 3,
         navItem: "Components",
         navLink: "/components",
@@ -44,11 +49,6 @@ export const HEADER:IHeader[] = [
         id: 4,
         navItem: "Templates",
         navLink: "/templates",
-    },
-    {
-        id: 5,
-        navItem: "Work-Projects",
-        navLink: "/projects",
     },
     {
         id: 8,
@@ -126,12 +126,17 @@ export const INTRODUCE:IntroduceItem[] = [
 
     },
     {
-        option: "Data Analyist *",
-        Icon: FaCode
+      option: "Data Analyist *",
+      Icon: FaCode
     },
-   
     {
-        option: "Available for Freelance & Remote Work @custom-work",
+        option: "Creator of @SpanLnk",
+        Icon: PiTerminalDuotone,
+        link: "https://snaplnk-gold.vercel.app/"
+
+    },
+    {
+        option: "Available for Remote Work @custom-work",
         Icon: MdWorkOutline,
         link: "/custom-work"
     },
@@ -7901,3 +7906,61 @@ export const ABOUT_CLIENT_WORK = [
 
 // CTA
   //✅ DONE
+// Products page (/products) — bio + blogs & case studies
+export type PostKind = "Blog" | "Case study";
+export interface IPost {
+    slug: string,          // used for /products/[slug]
+    title: string,
+    kind: PostKind,
+    date: string,          // ISO date (YYYY-MM-DD) — displayed as "Month YYYY"
+    description?: string,
+    image?: string,        // cover image shown on the home page (path in /public)
+}
+export const PRODUCTS_PAGE = {
+    name: "@hilal_11",
+    image: "/lolab.jpg",
+    imageAlt: "Illustration",
+    bio: [
+        "I'm a software engineer who builds products end to end — from the first sketch to the production deploy. I design interfaces, write the backend, and ship things people actually use.",
+        "This is where I document that work: case studies of the products I've built, and blogs on what I learned along the way. I'm based in Kashmir and always open to interesting work.",
+    ],
+}
+export const POSTS: IPost[] = [
+    // Case studies — shown as the underlined two-column list
+    { slug: "lokalhost_ui", title: "Lokalhostui case-study", kind: "Case study", date: "2025-08-01" , image: "/case-studies/lokalhost-case-study/landing-hero.png" },
+    { slug: "snaplnk", title: "Snaplnk case-study", kind: "Case study", date: "2026-03-10" , image: "/case-studies/snaplnk-case-study/landing-hero.png" },
+    { slug: "async_js", title: "Asynchronous JavaScript", kind: "Case study", date: "2023-02-22" },
+    { slug: "js_prototypes", title: "Javascript prototype __ptoto", kind: "Case study", date: "2026-05-15" },
+    { slug: "rag_systems", title: "RAG Architecture", kind: "Case study", date: "2026-04-02" },
+    { slug: "computer_electronics", title: "Computer electronics and circutery design", kind: "Case study", date: "2026-02-18" },
+    {
+        slug: "building-hilal-11-ui",
+        title: "Building the Hilal_11 component library",
+        kind: "Blog",
+        date: "2026-10-01",
+    },
+    {
+        slug: "custom-work-platform",
+        title: "Shipping a custom work platform for clients",
+        kind: "Blog",
+        date: "2026-08-12",
+    },
+    {
+        slug: "templates-that-convert",
+        title: "Designing landing page templates that convert",
+        kind: "Blog",
+        date: "2026-06-20",
+    },
+    {
+        slug: "nextjs-portfolio-lessons",
+        title: "What I learned building my portfolio in Next.js",
+        kind: "Blog",
+        date: "2026-03-05",
+    },
+    {
+        slug: "animations-with-gsap",
+        title: "Animations that feel right with GSAP and Motion",
+        kind: "Blog",
+        date: "2025-12-14",
+    },
+]

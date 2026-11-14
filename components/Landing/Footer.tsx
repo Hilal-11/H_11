@@ -10,13 +10,13 @@ import { useTheme } from 'next-themes';
 function Footer() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className='relative h-auto w-[100%] bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-400 dark:border-neutral-600 mx-auto'>
+    <div className='relative h-auto w-[100%] bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 mx-auto'>
       <StripedPattern
       direction="right"
       className="absolute inset-0 z-10 mask-l-from-70% mask-l-to-100% mask-r-from-70% mask-r-to-100%"
     />
-      <div className='relative container mx-auto !important border-dashed z-30 !important bg-neutral-100 dark:bg-neutral-950
-       h-auto border-l border-r border-neutral-400 dark:border-neutral-700 py-20 px-10'>
+      <div className='relative max-w-7xl w-full mx-auto border-dashed z-30 bg-white dark:bg-neutral-950
+       h-auto border-l border-r border-neutral-200 dark:border-neutral-800 py-20 px-10'>
         <div className='lg:w-2/3 w-full'>
             <div className='flex items-center'>
               <span className="block font-sans font-bold text-xl">
