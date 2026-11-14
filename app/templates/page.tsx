@@ -141,7 +141,7 @@ function Page() {
 
 
   return (
-    <div className='md:container lg:w-8xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto'>
+    <div className='max-w-7xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto'>
       {/* Heading */}
       <div className='relative h-auto pt-18 mx-auto'>
        <div className="mt-2 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
@@ -244,7 +244,7 @@ function Page() {
                     <h1 className='font-sans font-bold text-xl lg:text-5xl mx-auto text-left text-neutral-700 dark:text-neutral-300'>Premium Templates + Landings</h1>
                     <p className='font-sans font-medium text-sm mx-auto text-left text-neutral-600 dark:text-neutral-400 pl-2 pt-2'>Explore the best in class, shadcn compatible components with microinteractions and animations.</p>
                 </div>
-              <div className='w-full h-auto pt-6 pb-10 grid grid-cols-1 lg:grid-cols-4 justify-center gap-10 px-5 w-full mx-auto'>
+              <div className='w-full h-auto pt-6 pb-10 grid grid-cols-1 lg:grid-cols-3 justify-center gap-10 px-5 w-full mx-auto'>
                 
                 {templates.map((item) => (
                     <div key={item.id} className='mx-auto cursor-pointer relative lg:w-[360px] h-[420px] w-full rounded-xl border overflow-hidden border
@@ -505,7 +505,7 @@ function StatPill({ label, value }: { label: string; value: string }) {
 // ─── Main CTA ─────────────────────────────────────────────────────────────────
 function CustomWorkCTA() {
   return (
-    <div className="md:container lg:w-8xl w-full mx-auto py-20 px-4">
+    <div className="max-w-7xl w-full mx-auto py-20 px-4">
       <div
         className={cn(
             "relative overflow-hidden rounded-2xl",

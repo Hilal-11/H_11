@@ -42,7 +42,7 @@ function StatPill({ label, value }: { label: string; value: string }) {
 // ─── Main CTA ─────────────────────────────────────────────────────────────────
 function CTA() {
   return (
-    <div className="w-full container max-w-[1580px] mx-auto py-20 px-4">
+    <div className="w-full max-w-7xl mx-auto py-20 px-4">
       <div
         className={cn(
             "relative overflow-hidden rounded-2xl",

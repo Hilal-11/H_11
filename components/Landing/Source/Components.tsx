@@ -59,7 +59,7 @@ const components = [
 
 function Components() {
   return (
-    <div className="w-full container max-w-[1580px] pt-20 max-h-[1024px] lg:max-h-[870px] overflow-hidden relative pb-16">
+    <div className="w-full max-w-7xl mx-auto pt-20 max-h-[1024px] lg:max-h-[870px] overflow-hidden relative pb-16">
       <div className="w-full">
 
         {/* ── Header ── */}

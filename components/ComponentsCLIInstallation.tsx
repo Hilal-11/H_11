@@ -56,7 +56,7 @@ function ComponentsCLIInstallation() {
 
 
   return (
-    <div className='w-full container max-w-[1580px] h-auto min-h-[460px] border border-dashed border-neutral-300 dark:border-neutral-700 mt-10 bg-neutral-50 dark:bg-neutral-950 relative flex flex-col pb-1'>
+    <div className='w-full max-w-7xl mx-auto h-auto min-h-[460px] border border-dashed border-neutral-300 dark:border-neutral-700 mt-10 bg-neutral-50 dark:bg-neutral-950 relative flex flex-col pb-1'>
       
       {/* Top Grid - Info and Preview */}
       <div className='grid grid-cols-1 lg:grid-cols-3 lg:p-4 pb-0'>

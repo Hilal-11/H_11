@@ -106,7 +106,7 @@ function Page() {
 
 
   return (
-    <div className='md:container lg:w-8xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto pt-28'>
+    <div className='max-w-7xl w-full min-h-auto border-r border-l border-neutral-300 dark:border-neutral-800 mx-auto pt-28'>
       {/* Headings */}
        <AnnoncementBadge aboutBadge="Try lokalhost.io components and premium templates" link="https://lokalhost-io-i2di.vercel.app/" />
 
@@ -119,7 +119,6 @@ function Page() {
             <p className='font-sans font-medium text-sm lg:w-[70%] mx-auto px-4 lg:px-10 pt-2 text-center text-neutral-600 dark:text-neutral-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita hic voluptatum aperiam dolorem, sit est exercitationem, deleniti reiciendis perspiciatis.</p>
       </div>
       {/* CLI Installation setup */}
-      <div className='px-5'><ComponentsCLIInstallation /></div>
 
       {/* Components list  */}
       <div className="mt-10 w-full h-[40px] relative border-b border-t border-neutral-300 dark:border-neutral-800">
